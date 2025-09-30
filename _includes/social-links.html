@@ -89,9 +89,18 @@
         </a>
     {% endif %}
 
-    {% if site.email %}
-        <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}">
+    {% if site.email-user %}
+        <a class="link" id="email-link" data-title="Email" href="#">
             <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
         </a>
+        <script>
+            (function() {
+                var user = '{{ site.email-user }}';
+                var domain = '{{ site.email-domain }}';
+                var element = document.getElementById('email-link');
+                element.href = 'mailto:' + user + '@' + domain;
+                element.setAttribute('data-title', user + '@' + domain);
+            })();
+        </script>
     {% endif %}
 </div>

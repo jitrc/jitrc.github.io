@@ -48,7 +48,8 @@ github: jitrc
 # reddit: username
 #medium: medium
 # vimeo: myvimeo
-email: jit.ray.c@gmail.com
+email-user: jit.ray.c
+email-domain: gmail.com
 
 authors:
     johndoe:
