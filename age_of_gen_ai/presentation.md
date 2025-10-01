@@ -88,45 +88,21 @@ style: |
 
 ## Foundation Models vs. Pre-trained Models
 
-**The Paradigm Shift:**
-- 2010s: Task-specific pre-training (ImageNet, COCO)
-- 2020s: Universal foundation models (GPT, CLIP, DINOv3)
-
-**Key Differences:**
-- **Scale:** 1000 categories → trillions of tokens
-- **Learning:** Supervised → self-supervised
-- **Adaptation:** Fine-tuning → prompting
-- **Capability:** Single task → zero-shot multi-task
-
----
-
-## Traditional Pre-trained Models (2010s)
-
-**ImageNet & COCO Era:**
-- ImageNet: 1000 object categories, supervised labels
-- COCO: Object detection, segmentation, captions
-- First "common sense" dataset for computer vision
-
-**Limitations:**
+**Traditional Pre-trained Models (2010s):**
+- ImageNet (1000 categories), COCO - first "common sense" dataset for vision
+- Supervised learning, required extensive fine-tuning per task
 - Task-specific: Separate models per application
-- Transfer learning: Required extensive fine-tuning
-- Limited scope: Domain-specific feature extractors
 - Expensive: New labeled datasets per task
 
----
+**Foundation Models (2020s):**
+- Internet-scale training (trillions of tokens), self-supervised
+- Emergent capabilities: Reasoning, common sense, zero/few-shot learning
+- Multimodal: Text, images, audio, code, actions
 
-## Foundation Models (2020s)
-
-**The Internet-Scale Breakthrough:**
-- Training: Entire web corpus (trillions of tokens)
-- Self-supervised: No manual labeling required
-- Emergent: Reasoning, common sense, analogies
-
-**Revolutionary Capabilities:**
-- **Zero-shot learning:** Works on unseen tasks
-- **Few-shot learning:** Adapts from examples
-- **Prompting:** Natural language programming
-- **Multimodal:** Text, images, audio, code, actions
+**Key Shift:**
+- **Scale:** 1000 categories → trillions of tokens
+- **Adaptation:** Fine-tuning → prompting (natural language programming)
+- **Capability:** Single task → universal multi-task
 
 ---
 
@@ -187,6 +163,12 @@ style: |
 - **Entry Level:** Strict rules, clear instructions
 - **Middle Management:** Independent problem-solving
 - **Executive Leadership:** High autonomy, strategic decision-making
+
+**Probabilistic Robotics:** Models uncertainty (sensor noise, errors) for robust behavior in unpredictable environments
+
+**Programming Language Analogy:**
+- More optimization and control in Assembly/C than Python
+- GenAI provides intuitive natural interface, but prompt engineering becomes necessary as we've embraced a more ambiguous interface
 
 ---
 
@@ -595,15 +577,100 @@ style: |
 
 ## References
 
-**Key Resources:**
-- [The Bitter Lesson - Rich Sutton](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
+**Additional Resources:**
 - [NVIDIA - Generative Physical AI](https://www.nvidia.com/en-us/glossary/generative-physical-ai/)
-- Yann LeCun's presentations on self-supervised learning
+- [Understanding Generative AI in Layman's Terms](https://pub.aimind.so/understanding-generative-ai-in-laymans-term-46e8d088659a)
+- [IBM - History of AI](https://www.ibm.com/think/topics/artificial-intelligence)
 
-**Related Topics:**
-- Yann LeCun's Cake Analogy for Self-Supervised Learning
-- "Deep Reinforcement Learning is a waste of time" (2019 debate)
-- RL Renaissance: Next-generation RLVR models (2025)
+---
+
+## References: The Bitter Lesson
+
+1. [The Bitter Lesson by Rich Sutton (PDF)](https://www.cs.utexas.edu/~eunsol/courses/data/bitter_lesson.pdf)
+2. [Medium - The Bitter Lesson](https://medium.com/towards-nesy/the-bitter-lesson-1a1d282ae1b9)
+3. [arXiv - The Bitter Lesson of Scaling](https://arxiv.org/abs/2410.09649v1)
+4. [Cognitive Medium - The Bitter Lesson](https://cognitivemedium.com/bitter-lesson)
+5. [Xander.ai - Robotics and The Bitter Lesson](https://xander.ai/robotics-and-the-bitter-lesson)
+6. [Exxact Corp - Revisiting Sutton's Bitter Lesson](https://www.exxactcorp.com/blog/Deep-Learning/compute-goes-brrr-revisiting-sutton-s-bitter-lesson-for-artificial-intelligence)
+7. [Hacker News Discussion 1](https://news.ycombinator.com/item?id=42672790)
+8. [Hacker News Discussion 2](https://news.ycombinator.com/item?id=40134071)
+9. [Reddit - The Bitter Lesson 2.0](https://www.reddit.com/r/MachineLearning/comments/10ag9id/d_bitter_lesson_20/)
+
+---
+
+## References: Self-Supervised Learning & RL
+
+**Yann LeCun's Cake Analogy:**
+- [SyncedReview - Yann LeCun's Cake Analogy 2.0](https://medium.com/syncedreview/yann-lecun-cake-analogy-2-0-a361da560dae)
+- [YouTube - Yann LeCun on Self-Supervised Learning](https://www.youtube.com/watch?v=OuntI2Y4qxQo)
+
+**"Deep Reinforcement Learning is a waste of time" (2019):**
+- [Jtoy.net Blog](http://www.jtoy.net/blog/deep-reinforcement-learning-is-a-waste-of-time.html)
+- [Hacker News Discussion 1](https://news.ycombinator.com/item?id=27794248)
+- [Hacker News Discussion 2](https://news.ycombinator.com/item?id=27868539)
+- [Medium - Why RL Became Uncool](https://machine-learning-made-simple.medium.com/why-reinforcement-learning-became-uncool-and-how-it-might-come-back-7e791efbac24)
+- [Plain English - RL is Dead, Long Live the Transformer](https://plainenglish.io/blog/reinforcement-learning-is-dead-long-live-the-transformer)
+
+**RL Renaissance:**
+- [Medium - RL Isn't Dead, It's Evolving](https://medium.com/illumination/reinforcement-learning-isnt-dead-it-s-evolving-f8702b101f9e)
+
+---
+
+<!-- _class: divider -->
+
+# Appendix
+
+---
+
+## A1: Challenges of Reinforcement Learning (RL)
+
+**Difficulty of Reward Specification:**
+- Designing effective reward functions without incentivizing unintended behavior (reward hacking)
+- Hard to specify "good" outcomes precisely and comprehensively for complex tasks
+
+**Sample Inefficiency:**
+- Requires vast number of environment interactions to learn optimal policies
+- Expensive, time-consuming, or dangerous in real-world applications (robotics, autonomous driving)
+
+**Limited State and Action Spaces:**
+- Historically successful only in constrained environments (board games, simple control systems)
+- Real-world problems involve high-dimensional, continuous spaces making exploration extremely challenging
+
+**Need for Common Sense and Guided Exploration:**
+- Early RL struggled without prior knowledge or domain-specific heuristics
+- Agents would "wander aimlessly" in vast, unstructured environments without guidance
+
+---
+
+## A2: Unsupervised Learning: Images vs. Language
+
+**Challenges with Images:**
+- Raw pixel data lacks explicit, discoverable hierarchical structures consistent across diverse images
+- Pixel meaning highly context-dependent (red pixel could be car, flower, or brick wall)
+- Unsupervised models often learned noisy or uninterpretable features without human-annotated labels
+
+**Success with Language:**
+- **Sequential and Contextual Nature:** Words appear in specific order conveying meaning; context provides strong learning signals
+- **Statistical Regularities:** Rich patterns in word co-occurrence and grammatical structures
+- **Hierarchical Structure:** Natural progression from characters → words → phrases → sentences → paragraphs
+- **Predictive Tasks:** Masked language modeling (BERT) and next-token prediction (GPT) leverage inherent language structure
+
+---
+
+## A3: AI Agents: Resurgence of Early Concepts
+
+**Early AI Limitations:**
+- **Complexity:** Real-world environments overwhelmed available computational power
+- **Uncertainty:** Assumed perfect knowledge of environment (rarely realistic)
+- **Brittleness:** Rule-based systems failed when encountering unprogrammed situations
+- **Lack of Common Sense:** Missing broad, intuitive understanding of the world
+
+**LLMs Re-enabling Classical Methods:**
+- **Broad World Knowledge:** Unprecedented breadth of general knowledge and common sense from vast training data
+- **Natural Language Interface:** Human-like text understanding enabling intuitive goal specification
+- **Reasoning and Planning:** Emergent capabilities for breaking down complex tasks into sub-goals
+- **Tool Use:** Can be augmented with external tools (APIs, search engines, code interpreters)
+- **Handling Unstructured Information:** Excel at processing real-world's dominant unstructured text format
 
 ---
 
