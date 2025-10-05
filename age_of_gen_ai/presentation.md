@@ -24,6 +24,8 @@ style: |
 
 <!-- _class: title -->
 
+![bg opacity:0.3](https://raw.githubusercontent.com/tensorflow/playground/master/preview.png)
+
 # Age of Gen AI
 
 **Evolution, Capabilities, and Future Trends**
@@ -50,6 +52,8 @@ style: |
 
 ## GenAI Capabilities
 
+![bg right:35%](https://raw.githubusercontent.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network/master/images/AI_banner.png)
+
 **Text/Code Generation:**
 - Natural language understanding and generation
 - Code completion and generation
@@ -68,6 +72,8 @@ style: |
 ---
 
 ## What Makes GenAI Different?
+
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*7bRSYH6g6Eec2T3Nh_J73w.png)
 
 **Foundation Models:** Pre-trained on vast datasets, adaptable to multiple tasks
 - Traditional pre-trained models (ImageNet/COCO) were task-specific
@@ -108,6 +114,8 @@ style: |
 
 ## Evolution from Traditional AI to GenAI
 
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*VNpCOLa4zmzS5sDGSNcGjw.png)
+
 **AI: Artificial Intelligence (1950s)**
 - Expert systems for medical diagnostics
 - Rule-based systems for path planning (early GPS)
@@ -128,6 +136,8 @@ style: |
 ---
 
 ## AI Evolution: From Narrow to Broad Capabilities
+
+![bg right:40%](https://ourworldindata.org/uploads/2024/12/AI-parameters-Epoch-1536x1096.png)
 
 **AI (1950s):** Mimic human intelligence
 - Hand-written code/algorithms by domain experts
@@ -249,6 +259,8 @@ style: |
 
 ## Types of Learning in AI
 
+![bg right:35%](https://www.researchgate.net/publication/373535780/figure/fig1/AS:11431281210621453@1705501116569/Types-of-machine-learning-Machine-learning-encompasses-three-main-types-supervised.png)
+
 **Supervised Learning:**
 - Uses labeled data for training
 - Historically most successful approach
@@ -271,6 +283,8 @@ style: |
 ---
 
 ## Classical AI Concepts: Making a Comeback
+
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*bhFifratH9DjKqMBTeQG5A.gif)
 
 **Why Classical Methods Failed Initially:**
 - **RL:** Sample inefficient, lacked common sense
@@ -329,6 +343,8 @@ style: |
 
 ## Yann LeCun's Cake Analogy
 
+![bg right:35%](https://miro.medium.com/v2/resize:fit:1400/1*VT1TDnzhP4E9HhzkG6tZyA.png)
+
 **Information Content During Learning:**
 
 **Reinforcement Learning (the cherry - 1%):**
@@ -348,6 +364,8 @@ style: |
 
 ## The CNN Era (2012-2017)
 
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*vkQ0hXDaQv57sALXAJquxA.jpeg)
+
 - **2012 BREAKTHROUGH:** AlexNet won ImageNet, deep learning revolution begins
 - **Strong inductive bias:** Convolution perfectly suited for image structure
 - **Everything-to-image:** Audio spectrograms, road networks as layers
@@ -359,10 +377,13 @@ style: |
 
 ## RL Excitement and Difficulty
 
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*nTdVlhOp-h2NfRoVnHYW3g.png)
+
 - **Early promise:** Deep RL on Atari games, AlphaGo breakthrough
 - **Persistent challenges:** Reward hacking, sparse reward signals
 - **Sample inefficiency:** Millions of interactions needed for simple tasks
 - **LIMITATION:** Worked well in constrained environments, struggled in open worlds
+- **Example:** CoastRunners boat racing - agent farms powerups in circles instead of finishing race
 
 ---
 
@@ -398,6 +419,8 @@ style: |
 ---
 
 ## Transformers Changed Everything (2017)
+
+![bg right:45%](https://jalammar.github.io/images/t/transformer_resideual_layer_norm_3.png)
 
 **SEMINAL PAPER:** "Attention Is All You Need" - Vaswani et al., Google, 2017
 
@@ -450,6 +473,8 @@ style: |
 
 ## GenAI Architecture Overview
 
+![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*nbiCv7Vxqd5P6y58NvwM5g.png)
+
 - **Transformer Architecture:** Self-attention enabling parallel sequence processing
 - **Diffusion Models:** Gradual denoising for high-quality image/video generation
 - **Retrieval Augmented Generation (RAG):** Enhancing generation with external knowledge
@@ -480,6 +505,8 @@ style: |
 
 ## Current GenAI Trends (2025)
 
+![bg right:35%](https://images.ctfassets.net/fi0zmnwlsnja/23Zd1l5HaPb2J7tJkIHXTz/fe5c7e1dcfd27d1a5cfe0f1c9b0dd1e3/Gen_AI_Adoption.png)
+
 - **Multi-modal AI:** Processing multiple data types simultaneously
 - **AI-First Applications:** Software built with AI at its core
 - **Specialized AI Agents:** Task-specific AI with enhanced capabilities
@@ -491,10 +518,14 @@ style: |
 - **Workplace Transformation:** AI empowering employees
 - **Real-time AI Reasoning:** Enhanced voice interfaces
 
+**Key Stat:** 71% of organizations regularly use Gen AI in at least one function (2025)
+
 
 ---
 
 ## AI Evolution Stages
+
+![bg right:35%](https://www.nvidia.com/content/nvidiaGDC/us/en_US/glossary/generative-physical-ai/_jcr_content/root/responsivegrid/nv_container_392816145/nv_container/nv_image.coreimg.100.850.jpeg/1735078887580/gen-physical-ai-progression.jpeg)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -516,6 +547,8 @@ style: |
 ---
 
 ## LLM-powered Autonomous Agent Systems
+
+![bg right:40%](https://lilianweng.github.io/posts/2023-06-23-agent/agent-overview.png)
 
 > **Systems Thinking:** LLM models are like powerful engines; you need systems like airplanes, cars, or factories to take advantage of them and produce value.
 
