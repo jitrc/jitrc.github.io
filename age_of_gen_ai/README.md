@@ -33,6 +33,8 @@ marp presentation.md --pdf
 
 ```bash
 marp presentation.md --pptx -o presentation.pptx
+or
+marp presentation.md --pptx-editable -o presentation.pptx --allow-local-files
 ```
 
 ## Themes
