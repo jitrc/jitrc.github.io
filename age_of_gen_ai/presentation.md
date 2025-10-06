@@ -20,11 +20,23 @@ style: |
     align-items: center;
     justify-content: center;
   }
+  :root {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    color: #09c;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+
 ---
 
 <!-- _class: title -->
 
-![bg opacity:0.3](https://raw.githubusercontent.com/tensorflow/playground/master/preview.png)
+![bg opacity:0.1](./images/01-bg_tensorflow_playground_preview.png)
 
 # Age of Gen AI
 
@@ -52,20 +64,16 @@ style: |
 
 ## GenAI Capabilities
 
-![bg right:35%](https://raw.githubusercontent.com/ashishpatel26/Tools-to-Design-or-Visualize-Architecture-of-Neural-Network/master/images/AI_banner.png)
 
 **Text/Code Generation:**
-- Natural language understanding and generation
-- Code completion and generation
-- Document creation and summarization
+- Code completion and generation (Cursor, Claude Code)
+- Document creation and summarization (Gemini, ChatGPT)
 
 **Image/Video Generation:**
-- Text-to-image creation (DALL-E, Midjourney, Stable Diffusion)
-- Style transfer and image editing (NanoBanana, Qwen3-Image-Edit)
-- Video synthesis from prompts (Sora, Runway ML, Kling 2.1)
+- Text-to-image andd image editing (DALL-E, Midjourney, Nano Banana, Qwen-Image)
+- Video synthesis from prompts (Sora, Veo)
 
 **Actions/Tool/API Calls:**
-- Autonomous agents executing tasks
 - Tool use and reasoning capabilities
 - API integration for real-world actions
 
@@ -73,93 +81,57 @@ style: |
 
 ## What Makes GenAI Different?
 
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*7bRSYH6g6Eec2T3Nh_J73w.png)
+**Model Scale:** Billions to trillions of parameters
 
 **Foundation Models:** Pre-trained on vast datasets, adaptable to multiple tasks
-- Traditional pre-trained models (ImageNet/COCO) were task-specific
-- Foundation models enable multi-task, zero-shot learning
 
 **Multimodal Capabilities:** Processing and generating text, images, audio, video
-- Custom token support for Actions, Graphs, and Road Networks
 
 **Natural Interfaces:** Conversational interaction using everyday language
-- Advancement over earlier NLP models (LSTMs, RNNs)
 
 **Generation vs. Recognition:** Creating new content rather than classifying
 - Open-vocabulary image detection and any-text-to-image generation
 
-**Scale:** Billions to trillions of parameters
 
 ---
 
 ## Foundation Models vs. Pre-trained Models
 
 **Traditional Pre-trained Models (2010s):**
-- ImageNet (1000 categories), COCO - first "common sense" dataset for vision
-- Supervised learning, required extensive fine-tuning per task
-- Task-specific: Separate models per application
-- Expensive: New labeled datasets per task
+- **Scale:** ImageNet (1000 categories), COCO - dataset for vision, millions of images
+- **Adaptation:** Supervised learning, required extensive fine-tuning per task
+- **Capability:** Separate models per application, Expensive new labeled datasets per task
 
 **Foundation Models (2020s):**
-- Internet-scale training (trillions of tokens), self-supervised
-- Emergent capabilities: Reasoning, common sense, zero/few-shot learning
-- Multimodal: Text, images, audio, code, actions
+- **Scale:** Internet-scale training (trillions of tokens), self-supervised
+- **Adaptation:** prompting, zero/few-shot learning, universal multi-task
+- **Capability:** Text, images, audio, code, actions, Emergent Reasoning
 
-**Key Shift:**
-- **Scale:** 1000 categories → trillions of tokens
-- **Adaptation:** Fine-tuning → prompting (natural language programming)
-- **Capability:** Single task → universal multi-task
 
----
-
-## Evolution from Traditional AI to GenAI
-
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*VNpCOLa4zmzS5sDGSNcGjw.png)
-
-**AI: Artificial Intelligence (1950s)**
-- Expert systems for medical diagnostics
-- Rule-based systems for path planning (early GPS)
-- Logical reasoning and theorem proving
-
-**ML: Machine Learning (1980s)**
-- SVMs for image classification and text categorization
-- Decision Trees/Random Forests for pose estimation (Kinect)
-
-**DL: Deep Learning (2010s)**
-- CNNs for object detection in autonomous vehicles
-- RNNs for language translation and sequence prediction
-
-**GenAI: Generative AI (2020s)**
-- GPT: Predict the next item in a sequence
-- DALL-E: Realistic image generation from text
 
 ---
 
 ## AI Evolution: From Narrow to Broad Capabilities
 
-![bg right:40%](https://ourworldindata.org/uploads/2024/12/AI-parameters-Epoch-1536x1096.png)
 
 **AI (1950s):** Mimic human intelligence
 - Hand-written code/algorithms by domain experts
+- Example: Logical reasoning and Rule-based systems for path planning 
 
 **ML (1980s):** Learning trends from historical data
 - Hand-crafted features per domain/application
-- Function fitting on features
+- Function fitting on features (SVMs, Decision Trees/Random Forest in Kinect)
 
 **DL (2010s):** Learning features directly from data
-- Same architecture with automatic feature extraction
-- Different trained weights per task
-- Large-scale datasets
+- Same architecture with automatic feature extraction (CNN, RNN)
+- Different trained weights per task, with large datasets
 
 **GenAI (2020s):** Large foundation models
 - Same trained model for zero-shot application across tasks
-- Internet-scale training (trillions of tokens)
-- Billions to trillions of parameters
-- Multimodal I/O (Text, Image, Audio, Actions, API Calls)
 
 ---
 
-## AI, Uncertainty, and the Intelligence Trade-off
+## Uncertainty, and the Intelligence Trade-off
 
 > **Key Insight:** As we embrace higher levels of intelligence and autonomy, we must also accept more uncertainty. You can't expect a rule-based algorithm to work well on unstructured data, nor expect a smart model to always follow the same rules without creativity.
 
@@ -174,25 +146,39 @@ style: |
 - **Middle Management:** Independent problem-solving
 - **Executive Leadership:** High autonomy, strategic decision-making
 
+---
+
+## Uncertainty, and the Intelligence Trade-off, contd
+
 **Probabilistic Robotics:** Models uncertainty (sensor noise, errors) for robust behavior in unpredictable environments
 
 **Programming Language Analogy:**
-- More optimization and control in Assembly/C than Python
-- GenAI provides intuitive natural interface, but prompt engineering becomes necessary as we've embraced a more ambiguous interface
+- More control over optimization in Assembly/C/C++ than Python
+- GenAI (prompt engineering) intuitive and accessible natural language, more ambiguous, more capable
+
+![](./images/02-coding.png)
 
 ---
 
-## Part 1 Recap
-
-**What We Covered:**
-- GenAI capabilities: Text, images, video, actions
-- Foundation models vs. traditional pre-trained models
-- Evolution: AI → ML → DL → GenAI
-- Trade-off: Intelligence vs. uncertainty
-
-**Key Takeaway:** GenAI represents a paradigm shift from task-specific to universal models
+## Which Book ?
+ 
+![bg height:16cm](./images/03-aima_toc_annotated.png)
 
 ---
+
+## Artificial Intelligence A Modern Approach (1995)
+
+The authoritative, most-used AI textbook, adopted by over 1500 schools, by Stuart Russell and Peter Norvig
+
+![](./images/04-aima_editions.png)
+![bg right height:16cm](./images/05-aima-cover-1e.gif)
+
+AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
+
+Refer: https://aima.cs.berkeley.edu/
+
+---
+
 
 <!-- _class: divider -->
 
@@ -202,31 +188,25 @@ style: |
 
 ## A Personal Journey: Early Insights
 
-```
-2000 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     Automate everything
-     "I am lazy, can't stand inefficiency"
 
-2005 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     Operate at speed of thought
-     Software accelerates tasks... but still takes long to build
+**2000 Automate everything**
+*I am lazy, can't stand inefficiency*
 
-2008 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     Make Robots
-     Need robots for real-world problems
+**2005 Operate at speed of thought**
+*Software accelerates tasks... but still takes long to build*
 
-2011 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     Common sense for robots
-     How to collect and structure all human knowledge?
+**2008 Make Robots**
+*Need robots for real-world problems*
 
-2013 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     Dynamic compute allocation
-     Can't process all sensors in detail; compromises needed
+**2011 Common sense for robots**
+*How to collect and structure all human knowledge?*
 
-2014 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-     No fixed interfaces
-     Adaptive control, transfer learning between devices
-```
+**2013 Dynamic compute allocation**
+*Can't process all sensors in detail; compromises needed*
+
+**2014 No fixed interfaces**
+*Adaptive control, transfer learning between devices*
+
 
 ---
 
@@ -284,7 +264,7 @@ style: |
 
 ## Classical AI Concepts: Making a Comeback
 
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*bhFifratH9DjKqMBTeQG5A.gif)
+![bg right:40%](images/07-classical-ai-comeback.gif)
 
 **Why Classical Methods Failed Initially:**
 - **RL:** Sample inefficient, lacked common sense
@@ -364,7 +344,7 @@ style: |
 
 ## The CNN Era (2012-2017)
 
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*vkQ0hXDaQv57sALXAJquxA.jpeg)
+![bg right:40%](images/09-cnn-era-resnet.jpeg)
 
 - **2012 BREAKTHROUGH:** AlexNet won ImageNet, deep learning revolution begins
 - **Strong inductive bias:** Convolution perfectly suited for image structure
@@ -377,7 +357,7 @@ style: |
 
 ## RL Excitement and Difficulty
 
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*nTdVlhOp-h2NfRoVnHYW3g.png)
+![bg right:40%](images/10-rl-reward-hacking-alt.gif)
 
 - **Early promise:** Deep RL on Atari games, AlphaGo breakthrough
 - **Persistent challenges:** Reward hacking, sparse reward signals
@@ -420,7 +400,7 @@ style: |
 
 ## Transformers Changed Everything (2017)
 
-![bg right:45%](https://jalammar.github.io/images/t/transformer_resideual_layer_norm_3.png)
+![bg right:45%](images/11-transformer-architecture.png)
 
 **SEMINAL PAPER:** "Attention Is All You Need" - Vaswani et al., Google, 2017
 
@@ -525,7 +505,7 @@ style: |
 
 ## AI Evolution Stages
 
-![bg right:35%](https://www.nvidia.com/content/nvidiaGDC/us/en_US/glossary/generative-physical-ai/_jcr_content/root/responsivegrid/nv_container_392816145/nv_container/nv_image.coreimg.100.850.jpeg/1735078887580/gen-physical-ai-progression.jpeg)
+![bg right:35%](images/13-nvidia-ai-progression.jpeg)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -548,7 +528,7 @@ style: |
 
 ## LLM-powered Autonomous Agent Systems
 
-![bg right:40%](https://lilianweng.github.io/posts/2023-06-23-agent/agent-overview.png)
+![bg right:40%](images/15-agent-architecture.png)
 
 > **Systems Thinking:** LLM models are like powerful engines; you need systems like airplanes, cars, or factories to take advantage of them and produce value.
 
