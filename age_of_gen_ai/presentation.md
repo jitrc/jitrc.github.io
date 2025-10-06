@@ -465,46 +465,22 @@ Refer: https://aima.cs.berkeley.edu/
 - Basically tuned for humans to like it and communicate easily
 - Without this, GPT was like a human expert with knowledge but poor social skills
 
+![width:600px](images/19-cake_llm.png)
+
 ---
 
-## RL Renaissance: The Cherry on Top (2024-2025)
+## RL wasn't a waste—it needed the foundation model "cake" first (2024-2025)
 
 **Why RL Works Now (vs. 2019 criticism):**
 - **Foundation models provide common sense:** LLMs solve the "cold start" problem
-- **Language as reward:** Natural feedback instead of sparse numerical rewards
 - **Verifiable environments:** Code execution, math proofs enable RLVR
 
 **Modern Success Stories:**
 - **OpenAI o1:** Extended thinking time via RL, 83% → 94% on AIME with more compute
 - **DeepSeek R1:** Open-source reasoning model matching o1 performance
 - **Code generation:** RL improves debugging, test-driven refinement
-- **Contrast with 2019:** Same algorithms, but LLM backbone enables practical deployment
 
-**Key Insight:** RL wasn't a waste—it needed the foundation model "cake" first
-
----
-
-## GenAI Architecture Overview
-
-- **Transformer Architecture:** Self-attention enabling parallel sequence processing
-- **Diffusion Models:** Gradual denoising for high-quality image/video generation
-- **Retrieval Augmented Generation (RAG):** Enhancing generation with external knowledge
-- **Fine-Tuning:** From full fine-tuning to LoRA to prompt engineering
-- **Mixture of Experts (MoE):** For efficient scaling
-
-
----
-
-## Part 3 Recap
-
-**What We Covered:**
-- Transformers (2017): Self-attention revolutionized sequence modeling
-- GPT breakthrough: Next-token prediction → emergent intelligence
-- RLHF/SFT: Making models human-friendly (ChatGPT)
-- RL Renaissance: Foundation models enable practical RL deployment
-- Architecture: Transformers, diffusion, RAG, MoE
-
-**Key Takeaway:** Transformers + scale + RL + optimization = practical GenAI
+![height:280px](images/20-rl_scaling.png)
 
 ---
 
@@ -535,7 +511,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## AI Evolution Stages
 
-![bg right:40% width:500px](images/19-nvidia-ai-progression.png)
+![bg right:30% width:400px](images/21-nvidia-ai-progression.png)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -548,7 +524,6 @@ Refer: https://aima.cs.berkeley.edu/
 **Agentic AI (Current) - EMERGING**
 - Coding Assistant, Customer Service, Patient Care
 - **Status:** Early deployment, variable reliability, human oversight required
-- **Maturity levels:** Coding (high) > Customer service (medium) > Complex reasoning (low)
 
 **Physical AI (Next) - EARLY RESEARCH**
 - Self-Driving Cars (L4/L5 in limited areas), General Robotics
@@ -558,7 +533,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## LLM-powered Autonomous Agent Systems
 
-![bg right:45% width:580px](images/20-agent-architecture.png)
+![bg right:45% width:580px](images/22-agent-architecture.png)
 
 > **Systems Thinking:** LLM models are like powerful engines; you need systems like airplanes, cars, or factories to take advantage of them and produce value.
 
@@ -576,27 +551,19 @@ Refer: https://aima.cs.berkeley.edu/
 ## Next Challenges
 
 **World Model:**
-- **Problem:** Next-token prediction insufficient for 3D spatial reasoning
+- **Problem:** Next-token prediction insufficient for 3D spatial reasoning, needs understanding of physics
 - **Data gap:** Scarcity of "boring" everyday activity data, limited 3D spatial data
-- **Efforts:** GAIA-1 (Wayve), Sora's physics understanding, Genie 3
-- **Need:** Video prediction models understanding object permanence, physics
+- **Efforts:** GAIA-1 (Wayve), Sora's physics understanding, Genie 3, World Labs
 
 **Persistent Memory:**
 - **Problem:** Don't want AI "acting like it's their first day every day"
 - **What to store:** Importance, recency, relevance (forgetting curve)
 - **How to store:** Knowledge graphs, temporal sequences, hierarchical memory
-- **Examples:** Mem0, MemGPT, long-term context architectures
 
 **Continuous Learning:**
 - **Need:** Models with "muscle memory" and continuous learning
 - **Challenge:** Catastrophic forgetting vs. learning from mistakes
 - **Analogy:** "Sleeping over it" effect for consolidation
-- **Research:** Elastic Weight Consolidation, Progressive Neural Networks
-
-**Specialization:**
-- **Need:** Specialized, efficient, smaller, faster models
-- **Approaches:** Fine-tuning, LoRA, distillation
-- **Examples:** Domain-specific (medical, legal), task-specific (coding, math)
 
 ---
 
@@ -616,6 +583,7 @@ Refer: https://aima.cs.berkeley.edu/
 - No accountability frameworks for widespread AI deployment
 - **RECOMMENDATION:** Careful evaluation before factory and home deployment
 
+![bg right:30% width:800px](images/23-rouge_robot.gif)
 ---
 
 ## References
