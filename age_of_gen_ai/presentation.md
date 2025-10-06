@@ -31,14 +31,18 @@ style: |
   h2 {
     font-size: 1.25rem;
   }
-
+     section.centered-content { 
+     display: flex; 
+     flex-direction: column; 
+     align-items: center;
+  } 
 ---
 
 <!-- _class: title -->
 
 ![bg opacity:0.1](./images/01-bg_tensorflow_playground_preview.png)
 
-# Age of Gen AI
+# Age of Gen AI ✨
 
 **Evolution, Capabilities, and Future Trends**
 
@@ -81,21 +85,29 @@ https://www.jitrc.com/age_of_gen_ai/
 - Tool use and reasoning capabilities
 - API integration for real-world actions
 
+![bg right:30%](images/02-Pope_Francis_in_puffy_winter_jacket-660x808.jpg)
+
 ---
 
 ## What Makes GenAI Different?
 
-**Model Scale:** Billions to trillions of parameters
+**Model Scale:** 
+Billions to trillions of parameters
 
-**Foundation Models:** Pre-trained on vast datasets, adaptable to multiple tasks
+**Foundation Models:** 
+Pre-trained on vast datasets, adaptable to multiple tasks
 
-**Multimodal Capabilities:** Processing and generating text, images, audio, video
+**Multimodal Capabilities:** 
+Processing and generating text, images, audio, video
 
-**Natural Interfaces:** Conversational interaction using everyday language
+**Natural Interfaces:** 
+Conversational interaction using everyday language
 
-**Generation vs. Recognition:** Creating new content rather than classifying
-- Open-vocabulary image detection and any-text-to-image generation
+**Generation vs. Recognition:** 
+Creating new content rather than classifying.
+Open-vocabulary image detection and any-text-to-image generation
 
+![bg right:40% width:450px](images/03-foundation-models-explained_A.png)
 
 ---
 
@@ -111,7 +123,7 @@ https://www.jitrc.com/age_of_gen_ai/
 - **Adaptation:** prompting, zero/few-shot learning, universal multi-task
 - **Capability:** Text, images, audio, code, actions, Emergent Reasoning
 
-
+![bg right:30% width:350px](images/04-foundation-models-explained_B.png)
 
 ---
 
@@ -132,6 +144,9 @@ https://www.jitrc.com/age_of_gen_ai/
 
 **GenAI (2020s):** Large foundation models
 - Same trained model for zero-shot application across tasks
+
+
+![bg right:30% width:400px](images/05-genai_part_of_ai.png)
 
 ---
 
@@ -160,35 +175,11 @@ https://www.jitrc.com/age_of_gen_ai/
 - More control over optimization in Assembly/C/C++ than Python
 - GenAI (prompt engineering) intuitive and accessible natural language, more ambiguous, more capable
 
-![](./images/02-coding.png)
+![](./images/06-coding.png)
+
 
 ---
 
-## Which Book ?
- 
-![bg height:16cm](./images/03-aima_toc_annotated.png)
-
----
-
-## Artificial Intelligence A Modern Approach (1995)
-
-The authoritative, most-used AI textbook, adopted by over 1500 schools, by Stuart Russell and Peter Norvig
-
-![](./images/04-aima_editions.png)
-![bg right height:16cm](./images/05-aima-cover-1e.gif)
-
-AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
-
-Refer: https://aima.cs.berkeley.edu/
-
----
-
-
-<!-- _class: divider -->
-
-# Part 2: Historical Context & Key Concepts
-
----
 
 ## A Personal Journey: Early Insights
 
@@ -241,13 +232,18 @@ Refer: https://aima.cs.berkeley.edu/
 
 ---
 
+
+<!-- _class: divider -->
+
+# Part 2: Historical Context & Key Concepts
+
+---
+
 ## Types of Learning in AI
 
-![bg right:35%](https://www.researchgate.net/publication/373535780/figure/fig1/AS:11431281210621453@1705501116569/Types-of-machine-learning-Machine-learning-encompasses-three-main-types-supervised.png)
 
 **Supervised Learning:**
-- Uses labeled data for training
-- Historically most successful approach
+- Uses labeled data for training, historically most successful approach
 - Examples: Image classification, speech recognition
 
 **Unsupervised Learning:**
@@ -256,8 +252,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 **Reinforcement Learning:**
 - Trial-and-error learning with reward feedback
-- **DEBATE:** Some believe path to AGI, others cite sample inefficiency
-- Renaissance in combination with LLMs for reasoning tasks
+- Some believe path to AGI, others cite sample inefficiency
 
 **Self-Supervised Learning:**
 - Best of Supervised and Unsupervised
@@ -266,9 +261,26 @@ Refer: https://aima.cs.berkeley.edu/
 
 ---
 
-## Classical AI Concepts: Making a Comeback
+## Which Year ?
+ 
+![bg height:16cm](./images/07-aima_toc_annotated.png)
 
-![bg right:40%](images/07-classical-ai-comeback.gif)
+---
+
+## Artificial Intelligence A Modern Approach (1995)
+
+The authoritative, most-used AI textbook, adopted by over 1500 schools, by Stuart Russell and Peter Norvig
+
+![](./images/08-aima_editions.png)
+![bg right height:16cm](./images/09-aima-cover-1e.gif)
+
+AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
+
+Refer: https://aima.cs.berkeley.edu/
+
+---
+
+## Classical AI Concepts: Making a Comeback
 
 **Why Classical Methods Failed Initially:**
 - **RL:** Sample inefficient, lacked common sense
@@ -284,6 +296,92 @@ Refer: https://aima.cs.berkeley.edu/
 - **Planning:** LLMs decompose complex goals into sub-tasks
 - **Search:** Semantic search using embeddings
 - **RL:** Language feedback instead of sparse numerical rewards
+
+---
+
+## The CNN Era (2012-2017)
+
+- **2012 BREAKTHROUGH:** AlexNet won ImageNet, deep learning revolution begins
+- **Strong inductive bias:** Convolution perfectly suited for image structure
+- **Everything-to-image:** Audio spectrograms, road networks as layers
+- **Key datasets:** ImageNet, COCO
+- **Architecture evolution:** ResNet, wider networks, pyramids
+- **Current status:** Superseded by Vision Transformers (ViT, DINOv3)
+
+![bg right:30% width:300px](images/10-imagenet_alexnet_2012.png)
+
+---
+
+## Everyting as image, till transformers
+
+![left:40% width:500px](images/11-road_rules_as_image.png)
+
+
+![bg right:40% width:500px](images/12-road_encoded.png) 
+
+---
+
+## Scale drived Deep Learning Process (Andrew Ng 2016)
+
+<!-- _class: centered-content -->
+![height:550px](images/13-scale_dl.png)
+
+---
+
+## CNN's can't understand, the reason behind the laughter
+
+<!-- _class: centered-content -->
+![height:550px](images/14-DL_cant_understand.png)
+
+
+---
+
+## RL Excitement and Difficulty
+
+![bg right:40%](images/15-rl-reward-hacking-alt.gif)
+
+- **Early promise:** Deep RL on Atari games, AlphaGo breakthrough
+- **Persistent challenges:** Reward hacking, sparse reward signals
+- **Sample inefficiency:** Millions of interactions needed for simple tasks
+- **LIMITATION:** Worked well in constrained environments, struggled in open worlds
+- **Example:** CoastRunners boat racing - agent farms powerups in circles instead of finishing race
+
+---
+
+## Deep RL for AGI Ambitions (2016 Peak)
+
+**Key players:** DeepMind (AlphaGo), OpenAI (Dota 2, robotics)
+
+**Major projects:**
+- AlphaGo defeats Lee Sedol (2016)
+- Atari game suite benchmarks
+- OpenAI Gym standardized environments
+
+**This period saw peak optimism for RL as path to AGI**
+
+![bg right:40% width:500px](images/16-rl_agents.gif)
+
+---
+
+## Yann LeCun's Cake Analogy 2016
+
+
+**Information Content During Learning:**
+
+**Reinforcement Learning (the cherry - 1%):**
+- Scalar reward signal given intermittently
+- **Few bits per sample**
+
+**Supervised Learning (the icing - 10%):**
+- Category or numerical predictions for each input
+- **10 to 10,000 bits per sample**
+
+**Self-Supervised Learning (the cake - 89%):**
+- **KEY INSIGHT:** Predicts any part of input from any observed part
+- Future frame prediction, masked language modeling
+- **Millions of bits per sample**
+
+![bg right:40% width:500px](images/17-cake_annotated.png)
 
 ---
 
@@ -323,78 +421,9 @@ Refer: https://aima.cs.berkeley.edu/
 - Self-supervised learning surpassed supervised methods
 - No hand-designed features required
 
----
-
-## Yann LeCun's Cake Analogy
-
-![bg right:35%](https://miro.medium.com/v2/resize:fit:1400/1*VT1TDnzhP4E9HhzkG6tZyA.png)
-
-**Information Content During Learning:**
-
-**Reinforcement Learning (the cherry - 1%):**
-- Scalar reward signal given intermittently
-- **Few bits per sample**
-
-**Supervised Learning (the icing - 10%):**
-- Category or numerical predictions for each input
-- **10 to 10,000 bits per sample**
-
-**Self-Supervised Learning (the cake - 89%):**
-- **KEY INSIGHT:** Predicts any part of input from any observed part
-- Future frame prediction, masked language modeling
-- **Millions of bits per sample**
 
 ---
 
-## The CNN Era (2012-2017)
-
-![bg right:40%](images/09-cnn-era-resnet.jpeg)
-
-- **2012 BREAKTHROUGH:** AlexNet won ImageNet, deep learning revolution begins
-- **Strong inductive bias:** Convolution perfectly suited for image structure
-- **Everything-to-image:** Audio spectrograms, road networks as layers
-- **Key datasets:** ImageNet, COCO
-- **Architecture evolution:** ResNet, wider networks, pyramids
-- **Current status:** Superseded by Vision Transformers (ViT, DINOv3)
-
----
-
-## RL Excitement and Difficulty
-
-![bg right:40%](images/10-rl-reward-hacking-alt.gif)
-
-- **Early promise:** Deep RL on Atari games, AlphaGo breakthrough
-- **Persistent challenges:** Reward hacking, sparse reward signals
-- **Sample inefficiency:** Millions of interactions needed for simple tasks
-- **LIMITATION:** Worked well in constrained environments, struggled in open worlds
-- **Example:** CoastRunners boat racing - agent farms powerups in circles instead of finishing race
-
----
-
-## Deep RL for AGI Ambitions (2016 Peak)
-
-**Key players:** DeepMind (AlphaGo), OpenAI (Dota 2, robotics)
-
-**Major projects:**
-- AlphaGo defeats Lee Sedol (2016)
-- Atari game suite benchmarks
-- OpenAI Gym standardized environments
-
-**HISTORICAL NOTE:** This period saw peak optimism for RL as path to AGI
-
----
-
-## Part 2 Recap
-
-**What We Covered:**
-- Personal journey: From automation dreams to GenAI reality
-- Learning types: Self-supervised learning dominates (Yann's Cake)
-- The Bitter Lesson: Computation scales, human knowledge doesn't
-- Classical AI comeback: RL + agents work with LLM foundation
-
-**Key Takeaway:** General methods + scale > hand-coded expertise
-
----
 
 <!-- _class: divider -->
 
@@ -404,14 +433,14 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## Transformers Changed Everything (2017)
 
-![bg right:45%](images/11-transformer-architecture.png)
-
 **SEMINAL PAPER:** "Attention Is All You Need" - Vaswani et al., Google, 2017
 
 - **Self-attention mechanism:** Direct modeling of relationships between all positions
 - **Revolutionary insight:** Eliminated recurrence, enabled full parallelization
 - **PERFORMANCE:** Superior translation quality with less training time
 - **Easy to Scale:** Faster, shallower network that handles more scale
+
+![bg right:45% width:400px](images/18-transformer-architecture.png)
 
 ---
 
@@ -457,8 +486,6 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## GenAI Architecture Overview
 
-![bg right:40%](https://miro.medium.com/v2/resize:fit:1400/1*nbiCv7Vxqd5P6y58NvwM5g.png)
-
 - **Transformer Architecture:** Self-attention enabling parallel sequence processing
 - **Diffusion Models:** Gradual denoising for high-quality image/video generation
 - **Retrieval Augmented Generation (RAG):** Enhancing generation with external knowledge
@@ -489,7 +516,6 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## Current GenAI Trends (2025)
 
-![bg right:35%](https://images.ctfassets.net/fi0zmnwlsnja/23Zd1l5HaPb2J7tJkIHXTz/fe5c7e1dcfd27d1a5cfe0f1c9b0dd1e3/Gen_AI_Adoption.png)
 
 - **Multi-modal AI:** Processing multiple data types simultaneously
 - **AI-First Applications:** Software built with AI at its core
@@ -509,7 +535,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## AI Evolution Stages
 
-![bg right:35%](images/13-nvidia-ai-progression.jpeg)
+![bg right:40% width:500px](images/19-nvidia-ai-progression.png)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -532,7 +558,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 ## LLM-powered Autonomous Agent Systems
 
-![bg right:40%](images/15-agent-architecture.png)
+![bg right:45% width:580px](images/20-agent-architecture.png)
 
 > **Systems Thinking:** LLM models are like powerful engines; you need systems like airplanes, cars, or factories to take advantage of them and produce value.
 
