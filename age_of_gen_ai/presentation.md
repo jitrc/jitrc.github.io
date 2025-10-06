@@ -45,6 +45,10 @@ style: |
 **Jit Ray Chowdhury**
 2025
 
+
+
+https://www.jitrc.com/age_of_gen_ai/
+
 ---
 
 ## Table of Contents
@@ -695,3 +699,5 @@ Refer: https://aima.cs.berkeley.edu/
 
 Jit Ray Chowdhury
 2025
+
+https://www.jitrc.com/age_of_gen_ai/
