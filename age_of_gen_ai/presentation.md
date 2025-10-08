@@ -31,11 +31,16 @@ style: |
   h2 {
     font-size: 1.25rem;
   }
-     section.centered-content { 
-     display: flex; 
-     flex-direction: column; 
+     section.centered-content {
+     display: flex;
+     flex-direction: column;
      align-items: center;
-  } 
+  }
+  .source {
+    font-size: 0.6em;
+    color: #888;
+    opacity: 0.7;
+  }
 ---
 
 <!-- _class: title -->
@@ -276,7 +281,7 @@ The authoritative, most-used AI textbook, adopted by over 1500 schools, by Stuar
 
 AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
-Refer: https://aima.cs.berkeley.edu/
+<span class="source">Refer: https://aima.cs.berkeley.edu/</span>
 
 ---
 
@@ -315,9 +320,10 @@ Refer: https://aima.cs.berkeley.edu/
 ## Everyting as image, till transformers
 
 ![left:40% width:500px](images/11-road_rules_as_image.png)
+![bg right:40% width:500px](images/12-road_encoded.png)
 
 
-![bg right:40% width:500px](images/12-road_encoded.png) 
+<span class="source">source: [ChauffeurNet](https://arxiv.org/abs/1812.03079v1), [Wayformer](https://arxiv.org/abs/2207.05844)</span><span class="source"></span>
 
 ---
 
@@ -325,6 +331,7 @@ Refer: https://aima.cs.berkeley.edu/
 
 <!-- _class: centered-content -->
 ![height:550px](images/13-scale_dl.png)
+<span class="source">[deeplearning.ai](https://cs230.stanford.edu/files/C1M1.pdf) | [Youtube](https://www.youtube.com/watch?v=LcfLo7YP8O4)</span>
 
 ---
 
