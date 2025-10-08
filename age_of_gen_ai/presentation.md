@@ -591,7 +591,13 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 - **RECOMMENDATION:** Careful evaluation before factory and home deployment
 
 ![bg right:30% width:800px](images/23-rouge_robot.gif)
+
 ---
+
+![left:40% width:500px](images/ai_minister.png)
+![bg right:40% width:500px](images/deloitte_refund.png)
+
+----
 
 ## References
 
