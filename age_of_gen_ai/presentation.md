@@ -367,6 +367,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 **This period saw peak optimism for RL as path to AGI**
 
 ![bg right:40% width:500px](images/16-rl_agents.gif)
+![bg vertical width:400px](images/robot_hand_openai.jpg)
 
 ---
 
