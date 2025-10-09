@@ -323,7 +323,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 ![bg right:40% width:500px](images/12-road_encoded.png)
 
 
-<span class="source">source: [ChauffeurNet](https://arxiv.org/abs/1812.03079v1), [Wayformer](https://arxiv.org/abs/2207.05844)</span><span class="source"></span>
+<span class="source">source: [ChauffeurNet](https://arxiv.org/abs/1812.03079v1), [Wayformer](https://arxiv.org/abs/2207.05844)</span>
 
 ---
 
@@ -368,6 +368,20 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ![bg right:40% width:500px](images/16-rl_agents.gif)
 ![bg vertical width:400px](images/robot_hand_openai.jpg)
+
+---
+**DeepMind Breakout on the Atari in 2015, AlphaGo in 2016**
+
+![width:400px](images/DRL_games_deepmind.png)
+
+![bg right:40% width:500px](images/deepmind_alphago.png)
+
+<span class="source">source: [Human-level control through deep reinforcement learning](https://research.google/blog/from-pixels-to-actions-human-level-control-through-deep-reinforcement-learning/),
+ [BBC News](https://www.bbc.com/news/technology-35785875)
+</span>
+
+
+
 
 ---
 
