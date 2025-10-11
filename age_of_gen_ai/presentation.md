@@ -292,10 +292,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 - **Agent-Based Systems:** Brittle, domain-specific rules
 - **Search Algorithms:** Limited to well-defined state spaces
 
-**Why They Work Now with LLMs:**
-- **KEY ENABLER:** LLMs provide common sense reasoning and world knowledge
-- **Better representations:** Natural language vs. hand-coded features
-- **Hybrid approaches:** Neural reasoning + classical algorithms
+**Why They Work Now with LLMs:** LLMs provide common sense reasoning and world knowledge
 
 **Modern Success Examples:**
 - **Planning:** LLMs decompose complex goals into sub-tasks
@@ -328,7 +325,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 ---
 
 ## Scale drived Deep Learning Process (Andrew Ng 2016)
-
+But scale requirement grows exponentinally, labeled data is expensive
 <!-- _class: centered-content -->
 ![height:550px](images/13-scale_dl.png)
 <span class="source">[deeplearning.ai](https://cs230.stanford.edu/files/C1M1.pdf) | [Youtube](https://www.youtube.com/watch?v=LcfLo7YP8O4)</span>
@@ -514,20 +511,17 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ## Current GenAI Trends (2025)
 
-
-- **Multi-modal AI:** Processing multiple data types simultaneously
-- **AI-First Applications:** Software built with AI at its core
-- **Specialized AI Agents:** Task-specific AI with enhanced capabilities
-- **Generative User Interfaces:** AI-assisted interface design
+**Core Capabilities:**
+- **Conversational AI:** Real-time voice interactions with reasoning (Gemini Live, GPT-4o Voice)
+- **Multi-modal AI:** Unified processing of text, images, audio, and video
+- **Coding Agents:** AI pair programmers with autonomous debugging (Cursor, Claude Code, Copilot)
+- **Specialized AI Agents:** Domain-specific assistants with tool use and memory
 - **Hyper-Personalization:** Tailored experiences
-- **Conversational AI:** Advanced natural language interactions
-- **Service as Software:** AI agents driving productivity gains
-- **Healthcare Integration:** AI enhancing operations
-- **Workplace Transformation:** AI empowering employees
-- **Real-time AI Reasoning:** Enhanced voice interfaces
 
-**Key Stat:** 71% of organizations regularly use Gen AI in at least one function (2025)
-
+**Transforming Industries:**
+- **SaaS:** AI-first applications, generative UI, embedded copilots
+- **Healthcare:** Diagnostic assistance, drug discovery, personalized treatment plans
+- **Workplace:** Automated workflows, AI-powered productivity tools, "Service as Software"
 
 ---
 
@@ -589,7 +583,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ---
 
-**ML and DL Jaggered Performance**
+## ML and DL Jaggered Performance
 
 ![](images/wrong_car_ml.png)
 ![bg right:50% width:500px](images/tesla_moon.gif)
@@ -626,16 +620,32 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ## Summary
 
-- **Scale is crucial:** Raw compute matters, but efficiency (algorithmic and architectural improvements) is equally powerful for scaling
+- **Scale through efficiency, not just resources:** Raw compute and data are expensive; algorithmic and architectural improvements achieve scale with same resources
+    - Efficient models, smarter learning methods, better search algorithms, effective context management
 
 - **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
+    - AI Agents with tool use, memory, and planning are transforming everything
 
-- **Intelligence vs. Control, Interpretability trade-off:** More intelligence and autonomy comes with less Control and Interpretability
+- **The intelligence trade-off:** More capability and autonomy requires accepting less control and interpretability
+    - We would learn to trust intelligent systems more 
 
-- **Next frontier - World Models:** Emerging models with spatial reasoning, physics understanding, and persistent memory
+- **Next frontiers:** World models, persistent memory, and continuous learning
+    - Spatial reasoning, physics understanding, learning from experience without forgetting
 
-- **Responsible deployment:** Robust guardrails needed before autonomous operation without human oversight
+- **Responsible deployment:** Robust guardrails and evaluation frameworks needed before autonomous operation at scale
 
+---
+
+<!-- _class: title -->
+
+# Thank You
+
+**Questions?**
+
+Jit Ray Chowdhury
+2025
+
+https://www.jitrc.com/age_of_gen_ai/
 
 ----
 
@@ -736,15 +746,3 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 - **Tool Use:** Can be augmented with external tools (APIs, search engines, code interpreters)
 - **Handling Unstructured Information:** Excel at processing real-world's dominant unstructured text format
 
----
-
-<!-- _class: title -->
-
-# Thank You
-
-**Questions?**
-
-Jit Ray Chowdhury
-2025
-
-https://www.jitrc.com/age_of_gen_ai/
