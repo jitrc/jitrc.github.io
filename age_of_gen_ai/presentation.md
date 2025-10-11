@@ -621,6 +621,20 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 ![left:40% width:500px](images/ai_minister.png)
 ![bg right:40% width:500px](images/deloitte_refund.png)
 
+
+----
+
+## Summary
+
+- **Scale is crucial:** Raw compute matters, but efficiency (algorithmic and architectural improvements) is equally powerful for scaling
+
+- **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
+
+- **Next frontier - World Models:** Emerging models with spatial reasoning, physics understanding, and persistent memory
+
+- **Responsible deployment:** Robust guardrails needed before autonomous operation without human oversight
+
+
 ----
 
 ## References
