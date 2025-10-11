@@ -83,7 +83,7 @@ https://www.jitrc.com/age_of_gen_ai/
 - Document creation and summarization (Gemini, ChatGPT)
 
 **Image/Video Generation:**
-- Text-to-image andd image editing (DALL-E, Midjourney, Nano Banana, Qwen-Image)
+- Text-to-image and image editing (DALL-E, Midjourney, Nano Banana, Qwen-Image)
 - Video synthesis from prompts (Sora, Veo)
 
 **Actions/Tool/API Calls:**
@@ -124,7 +124,7 @@ Open-vocabulary image detection and any-text-to-image generation
 - **Capability:** Separate models per application, Expensive new labeled datasets per task
 
 **Foundation Models (2020s):**
-- **Scale:** Internet-scale training (trillions of tokens), self-supervised
+- **Scale:** Internet-scale training (trillions of tokens), self-supervised (learning from input itself without labels)
 - **Adaptation:** prompting, zero/few-shot learning, universal multi-task
 - **Capability:** Text, images, audio, code, actions, Emergent Reasoning
 
@@ -314,7 +314,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ---
 
-## Everyting as image, till transformers
+## Everything as image, till transformers
 
 ![left:40% width:500px](images/11-road_rules_as_image.png)
 ![bg right:40% width:500px](images/12-road_encoded.png)
@@ -324,7 +324,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ---
 
-## Scale drived Deep Learning Process (Andrew Ng 2016)
+## Scale drove Deep Learning Process (Andrew Ng 2016)
 But scale requirement grows exponentinally, labeled data is expensive
 <!-- _class: centered-content -->
 ![height:550px](images/13-scale_dl.png)
@@ -332,7 +332,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ---
 
-## CNN's can't understand, the reason behind the laughter
+## CNNs can't understand, the reason behind the laughter
 
 <!-- _class: centered-content -->
 ![height:550px](images/14-DL_cant_understand.png)
@@ -454,9 +454,9 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 **SEMINAL PAPER:** "Attention Is All You Need" - Vaswani et al., Google, 2017
 
-- **Self-attention mechanism:** Every position attends to all other positions directly. 
+- **Self-attention mechanism:** Every position attends to all other positions directly.
    - Constant Path Length
-   - Solved vanishing gradients 
+   - Mitigated vanishing gradients 
 
 - **Eliminated recurrence/Faster Training:** No sequential dependencies = full parallelization, GPUs could process entire sequences simultaneously
 
@@ -586,7 +586,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ---
 
-## ML and DL Jaggered Performance
+## ML and DL Jagged Performance
 
 ![](images/27-wrong_car_ml.png)
 ![bg right:50% width:500px](images/28-tesla_moon.gif)
@@ -625,12 +625,13 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 - **Scale through efficiency, not just resources:** Raw compute and data are expensive; algorithmic and architectural improvements achieve scale with same resources
     - Efficient models, smarter learning methods, better search algorithms, effective context management
+    - Effeciency often the key enabler for scaling
 
 - **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
     - AI Agents with tool use, memory, and planning are transforming everything
 
 - **The intelligence trade-off:** More capability and autonomy requires accepting less control and interpretability
-    - We would learn to trust intelligent systems more 
+    - We will learn to trust intelligent systems more 
 
 - **Next frontiers:** World models, persistent memory, and continuous learning
     - Spatial reasoning, physics understanding, learning from experience without forgetting
