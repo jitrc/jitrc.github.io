@@ -155,30 +155,30 @@ Open-vocabulary image detection and any-text-to-image generation
 
 ---
 
-## Uncertainty, and the Intelligence Trade-off
+## Control, Interpretability, and the Intelligence Trade-off
 
-> **Key Insight:** As we embrace higher levels of intelligence and autonomy, we must also accept more uncertainty. You can't expect a rule-based algorithm to work well on unstructured data, nor expect a smart model to always follow the same rules without creativity.
+> **Key Insight:** As we embrace higher levels of intelligence and autonomy, we must also accept reduced control and interpretability. You can't expect a rule-based algorithm to work well on unstructured data, nor expect a smart model to always follow the same rules without creativity.
 
-**AI's Embrace of Uncertainty:**
-- **Traditional AI (1950s):** Deterministic, probabilistic, provable, introspectable
+**The Evolution: Trading Control for Capability:**
+- **Traditional AI (1950s):** Deterministic, provable, fully introspectable
 - **ML (1980s):** Data-driven decision making from extracted features
 - **Deep Learning (2010s):** "Black box" models, limited explainability
 - **GenAI (2020s):** Handles ambiguity and unstructured data, but hallucinates
 
 **Organizational Hierarchy Analogy:**
-- **Entry Level:** Strict rules, clear instructions
-- **Middle Management:** Independent problem-solving
-- **Executive Leadership:** High autonomy, strategic decision-making
+- **Entry Level:** Strict rules, clear instructions (high control)
+- **Middle Management:** Independent problem-solving (moderate control)
+- **Executive Leadership:** High autonomy, strategic decision-making (low control, high trust)
 
 ---
 
-## Uncertainty, and the Intelligence Trade-off, contd
+## Control, Interpretability, and the Intelligence Trade-off, contd
 
-**Probabilistic Robotics:** Models uncertainty (sensor noise, errors) for robust behavior in unpredictable environments
+**Probabilistic Robotics:** Embraces uncertainty in sensing and actuation for robust behavior in unpredictable environments
 
 **Programming Language Analogy:**
 - More control over optimization in Assembly/C/C++ than Python
-- GenAI (prompt engineering) intuitive and accessible natural language, more ambiguous, more capable
+- GenAI (prompt engineering) intuitive and accessible natural language, less control, more capable
 
 ![](./images/06-coding.png)
 
@@ -630,7 +630,7 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 - **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
 
-- **Intelligence vs. explainability trade-off:** More intelligence and autonomy comes with less explainability and more opacity
+- **Intelligence vs. Control, Interpretability trade-off:** More intelligence and autonomy comes with less Control and Interpretability
 
 - **Next frontier - World Models:** Emerging models with spatial reasoning, physics understanding, and persistent memory
 
