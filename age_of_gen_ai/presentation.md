@@ -630,6 +630,8 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 - **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
 
+- **Intelligence vs. explainability trade-off:** More intelligence and autonomy comes with less explainability and more opacity
+
 - **Next frontier - World Models:** Emerging models with spatial reasoning, physics understanding, and persistent memory
 
 - **Responsible deployment:** Robust guardrails needed before autonomous operation without human oversight
