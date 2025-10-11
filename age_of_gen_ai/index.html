@@ -4033,10 +4033,19 @@ h2 {
 <h2 id="transformers-changed-everything-2017">Transformers Changed Everything (2017)</h2>
 <p><strong>SEMINAL PAPER:</strong> &quot;Attention Is All You Need&quot; - Vaswani et al., Google, 2017</p>
 <ul>
-<li><strong>Self-attention mechanism:</strong> Direct modeling of relationships between all positions</li>
-<li><strong>Revolutionary insight:</strong> Eliminated recurrence, enabled full parallelization</li>
-<li><strong>PERFORMANCE:</strong> Superior translation quality with less training time</li>
-<li><strong>Easy to Scale:</strong> Faster, shallower network that handles more scale</li>
+<li>
+<p><strong>Self-attention mechanism:</strong> Every position attends to all other positions directly.</p>
+<ul>
+<li>Constant Path Length</li>
+<li>Solved vanishing gradients</li>
+</ul>
+</li>
+<li>
+<p><strong>Eliminated recurrence/Faster Training:</strong> No sequential dependencies = full parallelization, GPUs could process entire sequences simultaneously</p>
+</li>
+<li>
+<p><strong>Foundation for multimodality:</strong> Token-based design (later) generalized beyond text</p>
+</li>
 </ul>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-theme="default" data-style=".divider {

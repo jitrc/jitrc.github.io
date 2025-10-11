@@ -454,10 +454,13 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 **SEMINAL PAPER:** "Attention Is All You Need" - Vaswani et al., Google, 2017
 
-- **Self-attention mechanism:** Direct modeling of relationships between all positions
-- **Revolutionary insight:** Eliminated recurrence, enabled full parallelization
-- **PERFORMANCE:** Superior translation quality with less training time
-- **Easy to Scale:** Faster, shallower network that handles more scale
+- **Self-attention mechanism:** Every position attends to all other positions directly. 
+   - Constant Path Length
+   - Solved vanishing gradients 
+
+- **Eliminated recurrence/Faster Training:** No sequential dependencies = full parallelization, GPUs could process entire sequences simultaneously
+
+- **Foundation for multimodality:** Token-based design (later) generalized beyond text
 
 ![bg right:45% width:400px](images/21-transformer-architecture.png)
 
