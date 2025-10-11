@@ -364,14 +364,14 @@ But scale requirement grows exponentinally, labeled data is expensive
 **This period saw peak optimism for RL as path to AGI**
 
 ![bg right:40% width:500px](images/16-rl_agents.gif)
-![bg vertical width:400px](images/robot_hand_openai.jpg)
+![bg vertical width:400px](images/17-robot_hand_openai.jpg)
 
 ---
 **DeepMind Breakout on the Atari in 2015, AlphaGo in 2016**
 
-![width:400px](images/DRL_games_deepmind.png)
+![width:400px](images/18-DRL_games_deepmind.png)
 
-![bg right:40% width:500px](images/deepmind_alphago.png)
+![bg right:40% width:500px](images/19-deepmind_alphago.png)
 
 <span class="source">source: [Human-level control through deep reinforcement learning](https://research.google/blog/from-pixels-to-actions-human-level-control-through-deep-reinforcement-learning/),
  [BBC News](https://www.bbc.com/news/technology-35785875)
@@ -400,7 +400,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 - Future frame prediction, masked language modeling
 - **Millions of bits per sample**
 
-![bg right:40% width:500px](images/17-cake_annotated.png)
+![bg right:40% width:500px](images/20-cake_annotated.png)
 
 ---
 
@@ -459,7 +459,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 - **PERFORMANCE:** Superior translation quality with less training time
 - **Easy to Scale:** Faster, shallower network that handles more scale
 
-![bg right:45% width:400px](images/18-transformer-architecture.png)
+![bg right:45% width:400px](images/21-transformer-architecture.png)
 
 ---
 
@@ -484,7 +484,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 - Basically tuned for humans to like it and communicate easily
 - Without this, GPT was like a human expert with knowledge but poor social skills
 
-![width:600px](images/19-cake_llm.png)
+![width:600px](images/22-cake_llm.png)
 
 ---
 
@@ -499,7 +499,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 - **DeepSeek R1:** Open-source reasoning model matching o1 performance
 - **Code generation:** RL improves debugging, test-driven refinement
 
-![height:280px](images/20-rl_scaling.png)
+![height:280px](images/23-rl_scaling.png)
 
 ---
 
@@ -527,7 +527,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## AI Evolution Stages
 
-![bg right:30% width:400px](images/21-nvidia-ai-progression.png)
+![bg right:30% width:400px](images/24-nvidia-ai-progression.png)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -549,7 +549,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## LLM-powered Autonomous Agent Systems
 
-![bg right:45% width:580px](images/22-agent-architecture.png)
+![bg right:45% width:580px](images/25-agent-architecture.png)
 
 > **Systems Thinking:** LLM models are like powerful engines; you need systems like airplanes, cars, or factories to take advantage of them and produce value.
 
@@ -585,8 +585,8 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## ML and DL Jaggered Performance
 
-![](images/wrong_car_ml.png)
-![bg right:50% width:500px](images/tesla_moon.gif)
+![](images/27-wrong_car_ml.png)
+![bg right:50% width:500px](images/28-tesla_moon.gif)
 
 <span class="source">source: [HOGgles: Visualizing Object Detection Features](https://people.csail.mit.edu/torralba/publications/ihog_iccv.pdf), [NDTV](https://www.ndtv.com/offbeat/watch-tesla-autopilot-feature-mistakes-moon-for-yellow-traffic-light-2495804)</span>
 
@@ -608,12 +608,12 @@ But scale requirement grows exponentinally, labeled data is expensive
 - No accountability frameworks for widespread AI deployment
 - **RECOMMENDATION:** Careful evaluation before factory and home deployment
 
-![bg right:30% width:800px](images/23-rouge_robot.gif)
+![bg right:30% width:800px](images/26-rouge_robot.gif)
 
 ---
 
-![left:40% width:500px](images/ai_minister.png)
-![bg right:40% width:500px](images/deloitte_refund.png)
+![left:40% width:500px](images/29-ai_minister.png)
+![bg right:40% width:500px](images/30-deloitte_refund.png)
 
 
 ----
