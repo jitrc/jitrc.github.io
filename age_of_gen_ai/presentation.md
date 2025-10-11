@@ -589,6 +589,15 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 
 ---
 
+**ML and DL Jaggered Performance**
+
+![](images/wrong_car_ml.png)
+![bg right:50% width:500px](images/tesla_moon.gif)
+
+<span class="source">source: [HOGgles: Visualizing Object Detection Features](https://people.csail.mit.edu/torralba/publications/ihog_iccv.pdf), [NDTV](https://www.ndtv.com/offbeat/watch-tesla-autopilot-feature-mistakes-moon-for-yellow-traffic-light-2495804)</span>
+
+---
+
 ## Risks and Responsible Development
 
 **Demonstrated Capabilities and Risks:**
