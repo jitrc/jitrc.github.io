@@ -186,6 +186,13 @@ Open-vocabulary image detection and any-text-to-image generation
 ---
 
 
+<!-- _class: divider -->
+
+# Part 2: Historical Context & Key Concepts
+
+---
+
+
 ## A Personal Journey: Early Insights
 
 
@@ -237,35 +244,6 @@ Open-vocabulary image detection and any-text-to-image generation
 
 ---
 
-
-<!-- _class: divider -->
-
-# Part 2: Historical Context & Key Concepts
-
----
-
-## Types of Learning in AI
-
-
-**Supervised Learning:**
-- Uses labeled data for training, historically most successful approach
-- Examples: Image classification, speech recognition
-
-**Unsupervised Learning:**
-- No labels required, leverages larger datasets
-- Pattern discovery (clustering, dimensionality reduction)
-
-**Reinforcement Learning:**
-- Trial-and-error learning with reward feedback
-- Some believe path to AGI, others cite sample inefficiency
-
-**Self-Supervised Learning:**
-- Best of Supervised and Unsupervised
-- Learn with pseudo-labels but at large scale
-- **Critical for foundation models like GPT, CLIP, DinoV3**
-
----
-
 ## Which Year ?
  
 ![bg height:16cm](./images/07-aima_toc_annotated.png)
@@ -300,6 +278,29 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 - **RL:** Language feedback instead of sparse numerical rewards
 
 ---
+
+## Types of Learning in AI
+
+
+**Supervised Learning:**
+- Uses labeled data for training, historically most successful approach
+- Examples: Image classification, speech recognition
+
+**Unsupervised Learning:**
+- No labels required, leverages larger datasets
+- Pattern discovery (clustering, dimensionality reduction)
+
+**Reinforcement Learning:**
+- Trial-and-error learning with reward feedback
+- Some believe path to AGI, others cite sample inefficiency
+
+**Self-Supervised Learning:**
+- Best of Supervised and Unsupervised
+- Learn with pseudo-labels but at large scale
+- **Critical for foundation models like GPT, CLIP, DinoV3**
+
+---
+
 
 ## The CNN Era (2012-2017)
 
@@ -482,16 +483,23 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## How ChatGPT is Better than GPT
 
-- Supervised Fine-Tuning (SFT) with RLHF
-- Also called: instruction tuned, human alignment, preference optimization
-- Basically tuned for humans to like it and communicate easily
-- Without this, GPT was like a human expert with knowledge but poor social skills
 
-![width:600px](images/22-cake_llm.png)
+**GPT (Base Model):**
+- Predicts next tokens, completes text
+- Lacks conversational ability and safety guardrails
+
+**ChatGPT = GPT + SFT + RLHF:**
+- **SFT (Supervised Fine-Tuning):** Learn from human-written conversations
+- **RLHF:** Optimize based on human preference rankings
+- Follows instructions, refuses harmful requests
+- **Analogy:** Brilliant expert who learned to communicate effectively
+
+![bg  right:40% width:500px](images/22-cake_llm.png)
 
 ---
 
 ## RL wasn't a waste—it needed the foundation model "cake" first (2024-2025)
+<!-- _class: centered-content -->
 
 **Why RL Works Now (vs. 2019 criticism):**
 - **Foundation models provide common sense:** LLMs solve the "cold start" problem
@@ -502,7 +510,8 @@ But scale requirement grows exponentinally, labeled data is expensive
 - **DeepSeek R1:** Open-source reasoning model matching o1 performance
 - **Code generation:** RL improves debugging, test-driven refinement
 
-![height:280px](images/23-rl_scaling.png)
+![height:300px](images/23-rl_scaling.png)
+
 
 ---
 
@@ -530,7 +539,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## AI Evolution Stages
 
-![bg right:30% width:400px](images/24-nvidia-ai-progression.png)
+![bg right:36% width:450px](images/24-nvidia-ai-progression.png)
 
 **Perception AI (2012 AlexNet) - MATURE**
 - Speech Recognition, Object Detection, Medical Imaging
@@ -588,8 +597,8 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ## ML and DL Jagged Performance
 
-![](images/27-wrong_car_ml.png)
-![bg right:50% width:500px](images/28-tesla_moon.gif)
+![](images/28-wrong_car_ml.png)
+![bg right:50% width:500px](images/29-tesla_moon.gif)
 
 <span class="source">source: [HOGgles: Visualizing Object Detection Features](https://people.csail.mit.edu/torralba/publications/ihog_iccv.pdf), [NDTV](https://www.ndtv.com/offbeat/watch-tesla-autopilot-feature-mistakes-moon-for-yellow-traffic-light-2495804)</span>
 
@@ -598,7 +607,6 @@ But scale requirement grows exponentinally, labeled data is expensive
 ## Risks and Responsible Development
 
 **Demonstrated Capabilities and Risks:**
-- **FACT:** LLM-generated content passes Turing tests, enabling misinformation
 - **Evolution:** Sandboxed → read-only internet → agentic write capabilities
 
 **Current Risk Acceleration:**
@@ -608,16 +616,19 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 **Accessibility vs. Safety Trade-off:**
 - **RISK:** Easy deployment without training expertise
-- No accountability frameworks for widespread AI deployment
 - **RECOMMENDATION:** Careful evaluation before factory and home deployment
 
-![bg right:30% width:800px](images/26-rouge_robot.gif)
+![bg right:35% width:600px](images/26-rouge_robot.gif)
+
+---
+![](images/27-robot_warehouse_crash.gif)
+
+<span class="source">source: [LinkedIn Yondu AI](https://www.linkedin.com/feed/update/urn:li:activity:7353924891257069569/)
 
 ---
 
-![left:40% width:500px](images/29-ai_minister.png)
-![bg right:40% width:500px](images/30-deloitte_refund.png)
-
+![left:40% width:500px](images/30-ai_minister.png)
+![bg right:40% width:500px](images/31-deloitte_refund.png)
 
 ----
 
