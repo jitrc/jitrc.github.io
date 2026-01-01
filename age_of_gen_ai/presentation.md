@@ -52,7 +52,7 @@ style: |
 **Evolution, Capabilities, and Future Trends**
 
 **Jit Ray Chowdhury**
-2025
+Jan 2026
 
 
 
@@ -326,14 +326,14 @@ AI Agent, Reasoning, Planning, Reinforcement Learning, are all old concepts.
 ---
 
 ## Scale drove Deep Learning Process (Andrew Ng 2016)
-But scale requirement grows exponentinally, labeled data is expensive
+But scale requirement grows exponentially, labeled data is expensive
 <!-- _class: centered-content -->
 ![height:550px](images/13-scale_dl.png)
 <span class="source">[deeplearning.ai](https://cs230.stanford.edu/files/C1M1.pdf) | [Youtube](https://www.youtube.com/watch?v=LcfLo7YP8O4)</span>
 
 ---
 
-## CNNs can't understand, the reason behind the laughter
+## CNNs can't understand the reason behind the laughter
 
 <!-- _class: centered-content -->
 ![height:550px](images/14-DL_cant_understand.png)
@@ -521,7 +521,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 
 ---
 
-## Current GenAI Trends (2025)
+## Current GenAI Trends (End of 2025)
 
 **Core Capabilities:**
 - **Conversational AI:** Real-time voice interactions with reasoning (Gemini Live, GPT-4o Voice)
@@ -581,7 +581,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 **World Model:**
 - **Problem:** Next-token prediction insufficient for 3D spatial reasoning, needs understanding of physics
 - **Data gap:** Scarcity of "boring" everyday activity data, limited 3D spatial data
-- **Efforts:** GAIA-1 (Wayve), Sora's physics understanding, Genie 3, World Labs
+- **Efforts:** Tesla FSD (end-to-end vision), GAIA-1 (Wayve), Sora's physics understanding, Genie 3, World Labs
 
 **Persistent Memory:**
 - **Problem:** Don't want AI "acting like it's their first day every day"
@@ -630,13 +630,13 @@ But scale requirement grows exponentinally, labeled data is expensive
 ![left:40% width:500px](images/30-ai_minister.png)
 ![bg right:40% width:500px](images/31-deloitte_refund.png)
 
-----
+---
 
 ## Summary
 
 - **Scale through efficiency, not just resources:** Raw compute and data are expensive; algorithmic and architectural improvements achieve scale with same resources
     - Efficient models, smarter learning methods, better search algorithms, effective context management
-    - Effeciency often the key enabler for scaling
+    - Efficiency often the key enabler for scaling
 
 - **Natural language as universal interface:** LLMs are foundational technologies—comparable to fire and the internet—democratizing access to intelligence
     - AI Agents with tool use, memory, and planning are transforming everything
@@ -658,7 +658,7 @@ But scale requirement grows exponentinally, labeled data is expensive
 **Questions?**
 
 Jit Ray Chowdhury
-2025
+Jan 2026
 
 https://www.jitrc.com/age_of_gen_ai/
 
