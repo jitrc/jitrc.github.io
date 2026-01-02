@@ -14,21 +14,31 @@ marp: false
 > - ... and other resources.
 
 ---
-### Introduction [Slides 1-2: Title + Table of Contents]
+
+## Part 1: The Foundation
+
+---
+### Slide 1: Title
 
 What is Generative AI, really? It feels like ChatGPT, Midjourney, and these tools appeared overnight—but the story behind them is decades in the making.
 
-I want to share my perspective on that journey: how we got here, where I think this is heading, and some insights I've developed from working in this space for over a decade.
+---
+### Slide 2: Table of Contents
+
+Today, I want to take you through that journey—with some insights I've developed from working in this space for over a decade. Let's dive in.
 
 ---
-### Part 1: The Foundation [Slides 3-4: Divider + GenAI Capabilities]
+### Slide 3: Part 1 Divider
 
 Let me quickly set the stage before we get to the interesting parts.
 
-GenAI has three core capabilities. **Text and Code Generation**—tools like ChatGPT and Copilot. **Image and Video Generation**—Midjourney, DALL-E, Sora. You've probably seen that viral image of the Pope in a puffy jacket—completely AI-generated. And most interesting to me: **Actions and Tool Use**, where AI stops talking and starts *doing* things in the real world.
+---
+### Slide 4: GenAI Capabilities
+
+GenAI has three core capabilities. **Text and Code Generation**—tools like ChatGPT and Copilot. **Image and Video Generation**—Midjourney, Sora, Nano Banana. You've probably seen that viral image of the Pope in a puffy jacket—completely AI-generated. And most interesting to me: **Actions and Tool Use**, where AI stops talking and starts *doing* things in the real world.
 
 ---
-### What Makes GenAI Different? [Slide 5]
+### Slide 5: What Makes GenAI Different
 
 What's behind all this? A few key things.
 
@@ -39,14 +49,14 @@ These models are **Multimodal**—text, images, audio, video. And you interact t
 The biggest shift is **Generation vs. Recognition**. For decades, AI recognized what was in an image. Now it creates entirely new images, text, code—things that never existed before.
 
 ---
-### Foundation Models vs. Pre-trained Models [Slide 6]
+### Slide 6: Foundation Models vs. Pre-trained Models
 
 This is worth understanding. In the 2010s, we had pre-trained models—trained on labeled datasets like ImageNet. Expensive, slow, and you needed a new model for every task.
 
 Today's Foundation Models are trained on the entire internet using **self-supervised learning**—the model learns without human labels. In 2012, building a cat-vs-dog classifier took weeks. Today, you just ask.
 
 ---
-### The Evolution of AI [Slide 7]
+### Slide 7: The Evolution of AI
 
 This diagram shows how it all fits together—a 70-year evolution where each layer builds on the last.
 
@@ -58,7 +68,7 @@ This diagram shows how it all fits together—a 70-year evolution where each lay
 Each step traded manual effort for learned capability. But this progression also comes with a trade-off that I think is underappreciated.
 
 ---
-### The Intelligence Trade-off [Slides 8-9]
+### Slide 8: The Intelligence Trade-off (Part 1)
 
 This evolution brings up something I think about a lot: the Intelligence Trade-off. As AI systems become more capable, we lose direct control and interpretability. You can't have both.
 
@@ -69,14 +79,24 @@ Think about it:
 
 It's like an organizational hierarchy. You give an entry-level employee strict instructions. You give a CEO high-level goals and trust them to figure out the details. You trade control for capability.
 
+---
+### Slide 9: The Intelligence Trade-off (Part 2)
+
 Think of it like programming languages. With Assembly, you have total control over every instruction. With Python, you give that up for productivity. And now with AI coding agents, you describe what you want in plain English and trust the system to figure it out. Each step trades control for capability.
 
 So when people ask, "Shouldn't AI be explainable?" The answer is: it's a spectrum. For a critical medical diagnosis, you want a simple, interpretable model. For discovering new drugs or creating art, you embrace the trade-off to unlock its full potential. You still want AI to explain its reasoning and make meaningful choices—but you also need to give it agency and creative freedom when you're setting high-level goals, tackling hard unstructured problems, or operating in unpredictable environments over extended periods.
 
 ---
-### Part 2: The History [Slides 10-11: Divider + Personal Journey]
+
+## Part 2: The History
+
+---
+### Slide 10: Part 2 Divider
 
 Now that we have the foundations, let's look at the history. To really understand why GenAI works now, you have to understand why other approaches *didn't* work before.
+
+---
+### Slide 11: Personal Journey
 
 I want to share my own journey through some of these challenges. Here's a timeline of problems I've been thinking about for over two decades.
 
@@ -93,7 +113,7 @@ In **2013**, while working on self-driving cars, I had another realization: comp
 In **2014**, I noticed something else: interfaces in computer systems are too rigid and brittle. As humans, we can learn to drive one car and easily transfer to another, or learn to operate a camera just by reading the manual. Computers, on the other hand, need fixed interfaces—and that wouldn't work long-term for robotics and intelligence.
 
 ---
-### How GenAI Addressed These Challenges [Slide 12]
+### Slide 12: How GenAI Addressed These Challenges
 
 Now here's the interesting part—how did GenAI actually address these challenges?
 
@@ -114,20 +134,26 @@ And finally, **no fixed interfaces**. Foundation models with zero-shot learning 
 It's remarkable to see these once-theoretical ideas become core features of tools we use every day.
 
 ---
-### The Comeback of Classical AI [Slides 13-15: AIMA TOC + Book + Classical AI Comeback]
+### Slide 13: AIMA Table of Contents
 
 Here's something that might surprise you. Take a look at this table of contents—I've highlighted the key topics. Intelligent Agents. Planning. Reinforcement Learning. These are all the hot topics of today.
 
 What year do you think this was published?
 
+---
+### Slide 14: AIMA Book Cover
+
 This is from "Artificial Intelligence: A Modern Approach"—the definitive AI textbook—and it was published in **1995**.
+
+---
+### Slide 15: Classical AI Comeback
 
 The core ideas behind AI agents are decades old. So why did they fail back then? Because they were brittle, they lacked common sense, and they only worked in extremely limited environments.
 
 Why do they work now? Because Large Language Models provide the missing ingredient: a massive database of common sense and world knowledge. Classical AI concepts are making a comeback because LLMs can serve as their intelligent "brain."
 
 ---
-### The Four Types of Learning [Slide 16]
+### Slide 16: The Four Types of Learning
 
 To understand the next breakthrough, we need to talk about the four types of learning in AI.
 
@@ -136,27 +162,42 @@ We have **Supervised Learning** (learning from labeled examples), **Unsupervised
 But the real hero of this story is the fourth one: **Self-Supervised Learning**. It's a clever way for a model to learn from unlabeled data—like text from the internet—by creating its own goals, such as predicting the next word in a sentence. This is what enables training at planetary scale.
 
 ---
-### The Rise and Fall of CNNs [Slides 17-20: CNN Era + Everything as Image + Scale + Can't Understand]
+### Slide 17: AlexNet / CNN Era Begins
 
 The modern AI era kicked off in 2012. Look at this graph—you can see traditional computer vision improving slowly, then AlexNet comes along and the accuracy jumps dramatically. That was the moment deep learning took over.
 
+---
+### Slide 18: Everything as an Image
+
 CNNs were so good at understanding images that for years, we tried to turn every problem into an image problem. We encoded road networks and audio spectrograms as images just to feed them into a CNN.
 
+---
+### Slide 19: Scale is Everything
+
 This led to a key discovery, captured well in this chart from Andrew Ng: with deep learning, scale was everything. Bigger neural networks trained on more data kept performing better—unlike traditional algorithms that plateaued. But there was a bottleneck: this required *labeled* data, which is expensive to create.
+
+---
+### Slide 20: CNNs Can't Understand
 
 And even with all that scale, CNNs could never truly *understand*. They could tell you a face was in a picture, but not why the expression was funny or sad.
 
 ---
-### The Hype and Heartbreak of Reinforcement Learning [Slides 21-23: RL Difficulty + Deep RL for AGI + AlphaGo]
+### Slide 21: RL Reward Hacking
 
-At the same time, Reinforcement Learning was having its moment. In 2016, DeepMind's AlphaGo beat the world's best Go player, and many thought RL was the path to general intelligence.
+At the same time, Reinforcement Learning was having its moment. But the hype met reality quickly. RL was plagued by problems. One was "reward hacking"—in one famous example, an AI supposed to race a boat figured out it could score more points by driving in circles collecting powerups instead of finishing the race.
 
-But the hype met reality quickly. RL was plagued by problems. One was "reward hacking"—in one famous example, an AI supposed to race a boat figured out it could score more points by driving in circles collecting powerups instead of finishing the race.
+---
+### Slide 22: AlphaGo
+
+In 2016, DeepMind's AlphaGo beat the world's best Go player, and many thought RL was the path to general intelligence.
+
+---
+### Slide 23: RL "Waste of Time"
 
 RL was also incredibly inefficient. By 2019, the frustration was so high that you'd see influential engineers writing posts titled "Deep Reinforcement Learning is a waste of time." And at that moment, they weren't entirely wrong.
 
 ---
-### The Cake Analogy [Slide 24]
+### Slide 24: The Cake Analogy
 
 This brings me to one of my favorite concepts, from AI pioneer Yann LeCun: the Cake Analogy. Look at this image—it explains why self-supervised learning is so powerful.
 
@@ -169,18 +210,28 @@ But **Self-Supervised Learning is the génoise—the entire cake**. By predictin
 This is why GPT works. Predicting the next word on a massive chunk of the internet is self-supervised learning at an almost unimaginable scale. It's how we finally built the "cake" of world knowledge.
 
 ---
-### The Bitter Lesson [Slides 25-26]
+### Slide 25: The Bitter Lesson (Introduction)
 
 There's another foundational idea I want to share—a famous essay called "The Bitter Lesson" by Rich Sutton.
 
 The lesson is this: for 70 years, we've learned that trying to hand-code human knowledge into AI doesn't work in the long run. The methods that win are general-purpose methods like **Search** and **Learning**, because they get better as computers get faster.
 
+---
+### Slide 26: The Bitter Lesson (Examples)
+
 History proves this repeatedly. In chess, brute-force search beat human strategy. In Go, massive self-play beat human intuition. In language, scale beat hand-coded grammar rules. The lesson is controversial, but history suggests that scale wins.
 
 ---
-### Part 3: The Technical Breakthrough [Slides 27-28: Divider + Transformers]
+
+## Part 3: The Technical Breakthrough
+
+---
+### Slide 27: Part 3 Divider
 
 So we had the history and the philosophy—but what was the actual technical invention that sparked the generative AI explosion?
+
+---
+### Slide 28: Transformers
 
 It came in 2017, in a paper from Google titled "Attention Is All You Need." It introduced the **Transformer architecture**—this is the diagram that launched a thousand AI companies.
 
@@ -190,26 +241,47 @@ This was revolutionary for three reasons:
 3. **Token-based Design:** It treated everything as a "token"—a general-purpose idea that later allowed the architecture to extend beyond text to images, audio, and more.
 
 ---
-### The Birth of ChatGPT and the RL Renaissance [Slides 29-31: GPT Emerges + ChatGPT + RL Renaissance]
+### Slide 29: GPT Emerges
 
 By 2019, while everyone was still criticizing Reinforcement Learning, the first GPT models showed something remarkable. The simple, self-supervised goal of "predict the next word," combined with the Transformer architecture and massive scale, led to surprising, *emergent* intelligence. No one had explicitly taught it to reason or code—it just learned.
 
-So if the base GPT model was the "cake" of knowledge, what made ChatGPT special? It added the icing and the cherry. It was fine-tuned on human conversations and optimized with **Reinforcement Learning from Human Feedback (RLHF)** to be helpful and safe. Think of it like a brilliant expert in a field—someone with deep knowledge but poor social skills. They know everything, but they can't explain it in a way that's useful to others. With a bit of training on how to communicate, suddenly that expertise becomes accessible to everyone.
+---
+### Slide 30: ChatGPT
 
-And this brings us full circle. Remember when RL was called a "waste of time"? It turns out RL wasn't dead—it was waiting for the cake. 
+So if the base GPT model was the "cake" of knowledge, what made ChatGPT special? It added the icing and the cherry. It was fine-tuned on human conversations and optimized with **Reinforcement Learning from Human Feedback (RLHF)** to be helpful and safe.
+
+Think of it like a brilliant expert in a field—someone with deep knowledge but poor social skills. They know everything, but they can't explain it in a way that's useful to others. With a bit of training on how to communicate, suddenly that expertise becomes accessible to everyone.
+
+---
+### Slide 31: RL Renaissance
+
+And this brings us full circle. Remember when RL was called a "waste of time"? It turns out RL wasn't dead—it was waiting for the cake.
 
 Think about it this way: when learning to ride a bicycle, you can use pure trial and error—RL works fine. But learning to fly a commercial plane? You need to learn a lot of unintuitive things first—physics, airspace regulations, aircraft performance limits, emergency procedures. You build that foundation of knowledge, and then you still need many hours of flight experience at the end to calibrate and develop well-rounded expertise in both understanding and execution. That's exactly what happened with AI. RL alone wasn't enough. But RL on top of a foundation model? That's powerful.
 
 We're now in an RL Renaissance, where it's used to create powerful reasoning systems and coding agents. It just needed that foundation of world knowledge to work.
 
 ---
-### Part 4: Today & The Future [Slides 32-35: Divider + Trends + NVIDIA Stages + Agent Architecture]
+
+## Part 4: Today & The Future
+
+---
+### Slide 32: Part 4 Divider
 
 So where are we now, and what's next?
 
+---
+### Slide 33: 2025 Trends
+
 In 2025, the capabilities are remarkable. We have real-time conversational AI, multi-modal models that understand everything, and coding agents that are becoming true partners. Industries from healthcare to software are being transformed.
 
+---
+### Slide 34: NVIDIA AI Progression
+
 This diagram from NVIDIA captures the trajectory well. We started with **Perception AI** in 2012—speech recognition, object detection. Then came **Generative AI**—content creation, digital marketing. Now we're entering **Agentic AI**—coding assistants, customer service agents. And on the horizon: **Physical AI**—self-driving cars and general robotics.
+
+---
+### Slide 35: Agent Architecture
 
 Agentic systems are really just systems built around LLMs. Think of LLMs as intelligence engines. Just like we design cars and airplanes to derive value from combustion or jet engines, we need to build agentic systems around LLMs to unlock their potential.
 
@@ -218,7 +290,7 @@ Here are the common components: **Tools**—calculators, code interpreters, web 
 These systems are already proving valuable in real applications—coding assistants like Cursor and GitHub Copilot, customer service agents, research assistants that can browse and synthesize information. This architecture will power the next wave of AI applications.
 
 ---
-### The Next Great Challenges [Slide 36]
+### Slide 36: The Next Great Challenges
 
 I'm actually more excited about what comes next. AI agents are great—they'll drive a lot of commercial value. But there's growing consensus on what we need to solve to take intelligence to a whole new level.
 
@@ -229,20 +301,32 @@ I'm actually more excited about what comes next. AI agents are great—they'll d
 3. **Continuous Learning:** You don't want to keep storing everything to memory and retrieving it, or have bloated context windows. Just like we build new skills into muscle memory for better efficiency and reliability over time, we need LLMs that can self-reflect and consolidate information—a kind of "sleeping on it" effect, distilling daily experiences into lasting capability.
 
 ---
-### Jagged Performance [Slide 37]
+### Slide 37: Jagged Performance
 
 These models have what I'd call a "jagged frontier" of performance. But here's the thing—this isn't new. ML and deep learning have always had jagged performance. It didn't start with LLMs. The difference now is that these systems are being deployed in high-stakes environments where failures are more visible and consequential.
 
 ---
-### Risks [Slides 38-40: Robot Crash + AI Minister]
+### Slide 38: Risks (Introduction)
 
 Responsible development is essential. It was fine to have agents do read-only operations—like searching the web. But as we give them more power to write, to pay, to interact with other agents, we need robust guardrails, rigorous testing, and clear accountability. Don't underestimate this—AI agents with large-scale reach across the internet can cause significant damage too.
 
-And for physical AI, the stakes are even higher. Look at the robot crashing in a warehouse. These systems can be superhuman one moment and fail comically the next. Physical AI needs even more testing and guardrails—the same level of scrutiny we've applied to self-driving cars—because failures in the real world have real consequences.
+---
+### Slide 39: Robot Crash
 
-And we're already seeing real-world consequences with LLMs too. Albania appointed an AI as a government minister—raising serious questions about accountability and oversight. And Deloitte had to issue refunds after their AI-generated report contained fabricated citations. These aren't hypotheticals—they're happening now, and they demand responsible oversight. 
+And for physical AI, the stakes are even higher. Look at the robot crashing in a warehouse. These systems can be superhuman one moment and fail comically the next.
+
+---
+### Slide 40: Real-World Consequences
+
+Physical AI needs even more testing and guardrails—the same level of scrutiny we've applied to self-driving cars—because failures in the real world have real consequences.
+
+And we're already seeing real-world consequences with LLMs too. Albania appointed an AI as a government minister—raising serious questions about accountability and oversight. And Deloitte had to issue refunds after their AI-generated report contained fabricated citations. These aren't hypotheticals—they're happening now, and they demand responsible oversight.
+
+---
+### Slide 41: Key Takeaways
 
 So, what are the key takeaways?
+
 1. **Scale is about efficiency, not just raw resources.** Algorithmic breakthroughs are important—sometimes the key enabler.
 2. **Natural language is the new universal interface** for computers. It's democratized access to intelligence—everyone can vibe code, ask for advice, non-ML engineers can start integrating ML solutions. So sit tight and expect many more AI agent innovations to come and transform everything, improving quality of life.
 3. **There is a fundamental trade-off between intelligence and control.** We need to learn to understand, characterize, and trust these systems more, but not blindly and not without guardrails. We need to learn where and how much to trust, and how to safeguard.
@@ -250,9 +334,9 @@ So, what are the key takeaways?
 5. And **responsible deployment is paramount.**
 
 ---
-### Closing Thoughts [Slide 42: Thank You]
+### Slide 42: Thank You
 
-The Age of GenAI is a fundamental shift in how we interact with technology and with intelligence itself. The question isn't *if* it will transform your work and life, but how quickly you can adapt.
+The Age of GenAI is a fundamental shift in how we interact with technology and with intelligence itself. The question isn't *if* it will transform your work and life, but how quickly you can adapt to benefit from it, and avoid the downsides.
 
 I hope this gave you a clearer picture of this field. If you found it useful, I'd appreciate you sharing it. And if you have thoughts on the biggest challenges or most exciting applications of AI, I'd genuinely like to hear them.
 
