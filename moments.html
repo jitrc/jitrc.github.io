@@ -1,0 +1,55 @@
+---
+layout: default
+title: Moments
+description: "Jit Ray Chowdhury — people I've met and work in robotics, autonomous vehicles, and aviation."
+permalink: /moments/
+---
+{% include header.html %}
+
+<main class="moments-page" role="main">
+  <h1>Moments</h1>
+
+  <section class="moments-section">
+    <h2 class="moments-section-title">People</h2>
+    <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
+      {% for moment in site.data.moments.people %}
+      <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <a href="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+           title="{{ moment.alt }}">
+          <img
+            src="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+            alt="{{ moment.alt }}"
+            itemprop="contentUrl"
+            loading="lazy"
+            width="400"
+            height="400">
+        </a>
+        <figcaption itemprop="caption">{{ moment.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="moments-section">
+    <h2 class="moments-section-title">Work</h2>
+    <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
+      {% for moment in site.data.moments.work %}
+      <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <a href="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+           title="{{ moment.alt }}">
+          <img
+            src="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+            alt="{{ moment.alt }}"
+            itemprop="contentUrl"
+            loading="lazy"
+            width="400"
+            height="400">
+        </a>
+        <figcaption itemprop="caption">{{ moment.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}

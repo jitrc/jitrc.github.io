@@ -1,0 +1,111 @@
+# People — photos with notable people
+# Add new entries here. Drop image in assets/images/moments/ first.
+
+people:
+  - filename: jit-ray-chowdhury-with-jensen-huang.jpg
+    alt: "Jit Ray Chowdhury with Jensen Huang"
+    caption: "With Jensen Huang"
+    name: Jensen Huang
+
+  - filename: jit-ray-chowdhury-with-linus-sebastian.jpg
+    alt: "Jit Ray Chowdhury with Linus Sebastian at CES"
+    caption: "With Linus Sebastian"
+    name: Linus Sebastian
+
+  - filename: jit-ray-chowdhury-with-sam-altman.jpg
+    alt: "Jit Ray Chowdhury with Sam Altman"
+    caption: "With Sam Altman"
+    name: Sam Altman
+
+  - filename: jit-ray-chowdhury-with-garry-tan.jpg
+    alt: "Jit Ray Chowdhury with Garry Tan"
+    caption: "With Garry Tan"
+    name: Garry Tan
+
+  - filename: jit-ray-chowdhury-with-trevor-blackwell-auro-robotics-shuttle.jpg
+    alt: "Jit Ray Chowdhury and Trevor Blackwell in Auro Robotics self-driving shuttle"
+    caption: "With Trevor Blackwell — Auro self-driving shuttle"
+    name: Trevor Blackwell
+
+# Work — robotics, aviation, and research (newest first)
+
+work:
+  - filename: jit-ray-chowdhury-at-nasa.jpg
+    alt: "Jit Ray Chowdhury at NASA"
+    caption: "At NASA"
+    era: NASA
+
+  - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
+    alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
+    caption: "After flying in rain — Cessna"
+    era: Aviation
+
+  - filename: jit-ray-chowdhury-at-waymo-hq.jpg
+    alt: "Jit Ray Chowdhury at Waymo headquarters"
+    caption: "Waymo HQ"
+    era: Waymo
+
+  - filename: jit-ray-chowdhury-with-waymo-jaguar-ipace.jpg
+    alt: "Jit Ray Chowdhury with Waymo autonomous Jaguar I-PACE"
+    caption: "Waymo Jaguar I-PACE"
+    era: Waymo
+
+  - filename: aerovect-autonomous-tug-team-2020.jpg
+    alt: "AeroVect autonomous tug team during COVID, October 2020"
+    caption: "AeroVect team — Oct 2020"
+    era: AeroVect
+
+  - filename: auro-robotics-sensor-mount-enclosure.jpg
+    alt: "Auro Robotics new sensor mount enclosure"
+    caption: "Auro — sensor mount enclosure"
+    era: Auro
+
+  - filename: auro-robotics-team-tahoe-ski-trip.jpg
+    alt: "Auro Robotics team ski trip at Lake Tahoe"
+    caption: "Team Auro — Tahoe"
+    era: Auro
+
+  - filename: auro-ridecell-team-ford-fusion-autonomous-vehicle.jpg
+    alt: "Auro Ridecell team with Ford Fusion autonomous research vehicle"
+    caption: "Auro Ridecell — Ford Fusion research vehicle"
+    era: Auro
+
+  # - filename: auro-robotics-autonomous-vehicle-indoor-test-track.jpg
+  #   alt: "Auro Robotics autonomous vehicles on indoor test track"
+  #   caption: "Indoor test track — Auro Robotics"
+  #   era: Auro
+
+  - filename: auro-robotics-team-santa-clara-university-2016.jpg
+    alt: "Auro Robotics self-driving shuttle team at Santa Clara University, 2016"
+    caption: "Auro Robotics — Santa Clara University, 2016"
+    era: Auro
+
+  # - filename: jit-ray-chowdhury-with-r2d2-at-lucasfilm.jpg
+  #   alt: "Jit Ray Chowdhury with R2-D2 at Lucasfilm"
+  #   caption: "With R2-D2 at Lucasfilm"
+  #   era: Fun
+
+  - filename: jit-ray-chowdhury-red-whittaker-cmu-field-robotics-30th-anniversary.jpg
+    alt: "Jit Ray Chowdhury and Red Whittaker at CMU Field Robotics Center FRC30 celebration"
+    caption: "FRC30 — CMU Field Robotics Center"
+    era: CMU
+
+  - filename: jit-ray-chowdhury-with-cmu-boss-autonomous-vehicle.jpg
+    alt: "Jit Ray Chowdhury with CMU Boss autonomous vehicle DARPA Urban Challenge"
+    caption: "CMU Boss — DARPA Urban Challenge winner"
+    era: CMU
+
+  - filename: jit-ray-chowdhury-with-quadrotor-drone.jpg
+    alt: "Jit Ray Chowdhury with quadrotor drone at Carnegie Mellon University"
+    caption: "Quadrotor drone — CMU"
+    era: CMU
+
+  # - filename: jit-ray-chowdhury-early-diy-robot-project.jpg
+  #   alt: "Jit Ray Chowdhury early DIY robot college project"
+  #   caption: "First robot — college project"
+  #   era: Early
+
+  - filename: jit-ray-chowdhury-techfest-iit-kharagpur-2008.jpg
+    alt: "Jit Ray Chowdhury at Techfest IIT Kharagpur 2008"
+    caption: "Techfest — IIT Kharagpur, 2008"
+    era: Early
