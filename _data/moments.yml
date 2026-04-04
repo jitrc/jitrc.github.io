@@ -35,10 +35,7 @@ work:
     caption: "At NASA"
     era: NASA
 
-  - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
-    alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
-    caption: "After flying in rain — Cessna"
-    era: Aviation
+  # moved to fun section below
 
   - filename: jit-ray-chowdhury-at-waymo-hq.jpg
     alt: "Jit Ray Chowdhury at Waymo headquarters"
@@ -105,7 +102,15 @@ work:
   #   caption: "First robot — college project"
   #   era: Early
 
+  # moved to fun section below
+
+# Fun / Personal
+
+fun:
+  - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
+    alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
+    caption: "After flying in rain — Cessna"
+
   - filename: jit-ray-chowdhury-techfest-iit-kharagpur-2008.jpg
     alt: "Jit Ray Chowdhury at Techfest IIT Kharagpur 2008"
     caption: "Techfest — IIT Kharagpur, 2008"
-    era: Early

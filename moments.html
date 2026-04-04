@@ -50,6 +50,28 @@ permalink: /moments/
       {% endfor %}
     </div>
   </section>
+
+  <section class="moments-section">
+    <h2 class="moments-section-title">Fun</h2>
+    <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
+      {% for moment in site.data.moments.fun %}
+      <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <a href="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+           title="{{ moment.alt }}">
+          <img
+            src="{{ site.url }}/assets/images/moments/{{ moment.filename }}"
+            alt="{{ moment.alt }}"
+            itemprop="contentUrl"
+            loading="lazy"
+            width="400"
+            height="400">
+        </a>
+        <figcaption itemprop="caption">{{ moment.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
 </main>
 
 {% include footer.html %}
