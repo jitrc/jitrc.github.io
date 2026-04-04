@@ -1,7 +1,7 @@
 // Break out of the site's 560px wrapper
 .wrapper-normal:has(.moments),
 .wrapper-large:has(.moments)
-  max-width: 1100px
+  max-width: 1200px
 
 .moments-page
   margin-top: 125px
@@ -28,11 +28,17 @@
 
 .moments-grid
   display: grid
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr))
-  gap: 2rem
-  max-width: 960px
+  grid-template-columns: repeat(5, 1fr)
+  gap: 1.2rem
+  max-width: 1180px
   margin: 0 auto
   padding: 0 1rem 4rem
+
+  @media (max-width: 900px)
+    grid-template-columns: repeat(3, 1fr)
+
+  @media (max-width: 600px)
+    grid-template-columns: repeat(2, 1fr)
 
 .moment-item
   margin: 0
