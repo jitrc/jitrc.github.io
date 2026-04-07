@@ -102,15 +102,14 @@ work:
   #   caption: "First robot — college project"
   #   era: Early
 
-  # moved to fun section below
+  - filename: jit-ray-chowdhury-wayfinder-airbus-innovation-center-aircraft.jpg
+    alt: "Jit Ray Chowdhury at Wayfinder Airbus Innovation Center aircraft"
+    caption: "Wayfinder — Airbus Innovation Center"
+    era: Wayfinder
 
 # Fun / Personal
 
 fun:
-  - filename: jit-ray-chowdhury-wayfinder-airbus-innovation-center-aircraft.jpg
-    alt: "Jit Ray Chowdhury at Wayfinder Airbus Innovation Center aircraft"
-    caption: "Wayfinder — Airbus Innovation Center"
-
   - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
     alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
     caption: "After flying in rain — Cessna"
