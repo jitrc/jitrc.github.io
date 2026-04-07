@@ -30,6 +30,11 @@ people:
 # Work — robotics, aviation, and research (newest first)
 
 work:
+  - filename: jit-ray-chowdhury-wayfinder-airbus-innovation-center-aircraft.jpg
+    alt: "Jit Ray Chowdhury at Wayfinder Airbus Innovation Center aircraft"
+    caption: "Wayfinder — Airbus Innovation Center"
+    era: Wayfinder
+
   - filename: jit-ray-chowdhury-at-nasa.jpg
     alt: "Jit Ray Chowdhury at NASA"
     caption: "At NASA"
@@ -101,11 +106,6 @@ work:
   #   alt: "Jit Ray Chowdhury early DIY robot college project"
   #   caption: "First robot — college project"
   #   era: Early
-
-  - filename: jit-ray-chowdhury-wayfinder-airbus-innovation-center-aircraft.jpg
-    alt: "Jit Ray Chowdhury at Wayfinder Airbus Innovation Center aircraft"
-    caption: "Wayfinder — Airbus Innovation Center"
-    era: Wayfinder
 
 # Fun / Personal
 
