@@ -112,16 +112,16 @@ work:
 fun:
   - filename: jit-ray-chowdhury-with-tesla-optimus.jpg
     alt: "Jit Ray Chowdhury with Tesla Optimus robot"
-    caption: "Tesla Optimus"
+    caption: "Tesla Optimus — Dec 2025"
 
   - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
     alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
-    caption: "After flying in rain — Cessna"
-
-  - filename: jit-ray-chowdhury-techfest-iit-kharagpur-2008.jpg
-    alt: "Jit Ray Chowdhury at Techfest IIT Kharagpur 2008"
-    caption: "Techfest — IIT Kharagpur, 2008"
+    caption: "After flying in rain — Cessna, 2023"
 
   - filename: jit-ray-chowdhury-early-robot-build-college-team.jpg
-    alt: "Jit Ray Chowdhury early robot build with college team"
-    caption: "First robot build — college team"
+    alt: "Jit Ray Chowdhury at Kshitij TechFest IIT KGP 2011"
+    caption: "Kshitij TechFest, IIT KGP — 2011"
+
+  - filename: jit-ray-chowdhury-techfest-iit-kharagpur-2008.jpg
+    alt: "Jit Ray Chowdhury at Techfest IIT Kharagpur 2008 with autonomous robot"
+    caption: "First autonomous robot — Techfest, IIT Kharagpur, 2008"
