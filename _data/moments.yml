@@ -110,6 +110,10 @@ work:
 # Fun / Personal
 
 fun:
+  - filename: jit-ray-chowdhury-with-tesla-optimus.jpg
+    alt: "Jit Ray Chowdhury with Tesla Optimus robot"
+    caption: "Tesla Optimus"
+
   - filename: jit-ray-chowdhury-learning-to-fly-cessna.jpg
     alt: "Jit Ray Chowdhury with Cessna at airfield after flying in rain"
     caption: "After flying in rain — Cessna"
