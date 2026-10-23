@@ -13,6 +13,10 @@
         <span>Email</span>
     </a>
 
+    <a class="share-btn share-btn--icon" href="https://x.com/intent/post?url={{ share_url | uri_escape }}{% if site.twitter %}&amp;via={{ site.twitter }}{% endif %}" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X">
+        <svg class="share-icon share-icon--fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+
     <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url | uri_escape }}" target="_blank" rel="noopener">
         <svg class="share-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
         <span>LinkedIn</span>
