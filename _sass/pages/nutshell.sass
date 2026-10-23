@@ -1,0 +1,156 @@
+.page.nutshell
+    margin-top: 60px
+
+    .nutshell-index,
+    .nutshell-note
+        max-width: 720px
+        margin: 0 auto
+
+    h1.title
+        text-align: left
+        margin-bottom: 1rem
+        font-size: 2.2rem
+
+.nutshell-intro
+    color: $alpha
+    font-size: 1.05rem
+    line-height: 1.7
+    margin-bottom: 3rem
+
+.nutshell-list
+    list-style: none
+    margin: 0
+    padding: 0
+
+.nutshell-card
+    border-top: 1px solid $epsilon
+
+    &:last-child
+        border-bottom: 1px solid $epsilon
+
+.nutshell-card-link
+    display: block
+    padding: 1.5rem 0
+    color: inherit
+    text-decoration: none
+
+    &:hover .nutshell-card-title
+        color: $delta
+
+.nutshell-card-title
+    font-size: 1.35rem
+    margin: 0 0 .4rem
+    transition: color .15s ease
+
+.nutshell-card-summary
+    color: $alpha
+    font-size: .95rem
+    line-height: 1.6
+    margin: 0 0 .7rem
+
+.nutshell-card-meta
+    font-size: .72rem
+    letter-spacing: .08em
+    text-transform: uppercase
+    color: $gama
+
+.nutshell-tag
+    display: inline-block
+    margin-left: .6rem
+    padding: .1rem .5rem
+    border: 1px solid $epsilon
+    border-radius: 3px
+    color: $alpha
+    font-size: .68rem
+    letter-spacing: .05em
+
+.nutshell-meta
+    font-size: .75rem
+    letter-spacing: .08em
+    text-transform: uppercase
+    color: $gama
+    margin-bottom: 2rem
+
+    .nutshell-tag:first-of-type
+        margin-left: 1rem
+
+.nutshell-summary
+    font-size: 1.1rem
+    line-height: 1.7
+    color: $alpha
+    border-left: 3px solid $epsilon
+    padding-left: 1rem
+    margin: 0 0 2.5rem
+
+.nutshell-note
+    line-height: 1.75
+
+    h2
+        margin-top: 3rem
+        font-size: 1.4rem
+
+    h3
+        margin-top: 2rem
+        font-size: 1.15rem
+
+    li
+        margin: .35rem 0
+
+    table
+        width: 100%
+        border-collapse: collapse
+        margin: 1.5rem 0
+        font-size: .9rem
+
+        th,
+        td
+            border-bottom: 1px solid $epsilon
+            padding: .55rem .6rem
+            text-align: left
+            vertical-align: top
+
+        th
+            font-weight: 600
+
+.nutshell-back
+    margin-top: 4rem
+    padding-top: 1.5rem
+    border-top: 1px solid $epsilon
+    font-size: .9rem
+
+.diagram
+    margin: 2.5rem 0
+    text-align: center
+
+    svg
+        display: block
+        width: 100%
+        height: auto
+        margin: 0 auto
+        max-width: 640px
+
+    figcaption
+        margin-top: .8rem
+        font-size: .8rem
+        color: $gama
+
+.callout
+    background: $epsilon
+    border-left: 3px solid $delta
+    padding: 1rem 1.2rem
+    margin: 2rem 0
+    font-size: .95rem
+
+    p:last-child
+        margin-bottom: 0
+
+    strong
+        display: block
+        margin-bottom: .3rem
+
+@media #{$below}
+    .page.nutshell
+        margin-top: 30px
+
+    .nutshell-note
+        font-size: .95rem

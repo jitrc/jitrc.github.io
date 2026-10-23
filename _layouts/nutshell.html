@@ -1,0 +1,17 @@
+---
+layout: page
+---
+<article class="nutshell-note">
+    <h1 class="title">{{ page.title }}</h1>
+
+    <p class="nutshell-meta">
+        <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+        {% for tag in page.tags %}<span class="nutshell-tag">{{ tag }}</span>{% endfor %}
+    </p>
+
+    {% if page.summary %}<p class="nutshell-summary">{{ page.summary }}</p>{% endif %}
+
+    {{ content }}
+
+    <p class="nutshell-back"><a href="{{ "/nutshell/" | relative_url }}">&larr; All Nutshell notes</a></p>
+</article>

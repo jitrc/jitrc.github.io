@@ -3,3 +3,4 @@ age_of_gen_ai/.DS_Store
 potential_images/
 node_modules/
 package-lock.json
+.sass-cache/

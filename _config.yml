@@ -108,3 +108,12 @@ gems:
 
 jekyll-mentions:
     base_url: https://github.com
+
+# "Nutshell" — short technical explainers with diagrams.
+# Notes live in _nutshell/*.md and render at /nutshell/<slug>/.
+nutshell: true
+
+collections:
+    nutshell:
+        output: true
+        permalink: /nutshell/:name/

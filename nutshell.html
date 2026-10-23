@@ -1,0 +1,30 @@
+---
+layout: page
+title: Nutshell
+description: "Short, practical explainers on agent protocols, sandboxes, and infrastructure."
+permalink: /nutshell/
+---
+<section class="nutshell-index">
+    <h1 class="title">Nutshell</h1>
+    <p class="nutshell-intro">Short, practical explainers. One concept per page, a diagram where it helps, and the details that actually matter when you build with it.</p>
+
+    {% assign notes = site.nutshell | sort: "date" | reverse %}
+    {% if notes.size == 0 %}
+        <p class="nutshell-empty">First note coming soon.</p>
+    {% else %}
+        <ul class="nutshell-list">
+        {% for note in notes %}
+            <li class="nutshell-card">
+                <a class="nutshell-card-link" href="{{ note.url | relative_url }}">
+                    <h2 class="nutshell-card-title">{{ note.title }}</h2>
+                    <p class="nutshell-card-summary">{% if note.summary %}{{ note.summary }}{% else %}{{ note.excerpt | strip_html | truncate: 180 }}{% endif %}</p>
+                    <span class="nutshell-card-meta">
+                        <time datetime="{{ note.date | date: "%Y-%m-%d" }}">{{ note.date | date: "%b %d, %Y" }}</time>
+                        {% for tag in note.tags %}<span class="nutshell-tag">{{ tag }}</span>{% endfor %}
+                    </span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</section>
