@@ -111,7 +111,9 @@ jekyll-mentions:
 
 # "Nutshell" — short technical explainers with diagrams.
 # Notes live in _nutshell/*.md and render at /nutshell/<slug>/.
-nutshell: true
+# The flag cannot be called `nutshell`: a collection with that label shadows
+# `site.nutshell` (it becomes the document array), so the nav check would fail.
+show_nutshell: true
 
 collections:
     nutshell:

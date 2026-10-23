@@ -16,8 +16,10 @@ the portable source of truth for agents working in this repo.
 | `scripts/optimize-moments.js` | Regenerates thumbnails with `sharp` |
 | `_config.yml` | Site config; nav flags (`blog`, `moments`, `nutshell`, …) |
 
-Nav links are gated by booleans in `_config.yml` (e.g. `nutshell: true`) and rendered in
-`_includes/nav.html`.
+Nav links are gated by booleans in `_config.yml` (e.g. `show_nutshell: true`) and rendered
+in `_includes/nav.html`. A flag must not share a name with a collection: `nutshell: true`
+would be shadowed by the `_nutshell` collection, so `site.nutshell` becomes the document
+array and the nav check silently fails.
 
 ## Local preview
 
