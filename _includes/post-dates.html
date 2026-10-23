@@ -1,0 +1,10 @@
+{% assign written = page.written_date | default: page.date %}
+{% if page.written_date %}
+<time datetime="{{ written | date: '%Y-%m-%d' }}">Original {{ written | date: '%b %d, %Y' }}</time>
+{% else %}
+<time datetime="{{ written | date: '%Y-%m-%d' }}">{{ written | date: '%A. %B %d, %Y' }}</time>
+{% endif %}
+{% if page.updated_date and page.updated_date != written %}
+<span class="date-sep">·</span>
+<time datetime="{{ page.updated_date | date: '%Y-%m-%d' }}">Updated {{ page.updated_date | date: '%b %d, %Y' }}</time>
+{% endif %}

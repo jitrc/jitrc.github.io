@@ -27,6 +27,29 @@ Notes:
   even though Ruby Sass (GitHub Pages) accepts them.
 - `_site/` and `.jekyll-cache/` are build artifacts.
 
+## Writing
+
+Essays live in `_posts/` and render at `/writing/<slug>/`, listed newest-first on `/writing/`.
+Front matter:
+
+```yaml
+---
+title: "The harness is the product"
+date: 2026-10-23          # publish date: ordering, feed, permalink-independent
+written_date: 2026-05-25  # optional; renders as "Original May 25, 2026"
+updated_date: 2026-10-23  # optional; renders as "Updated Oct 23, 2026"
+description: "One line for the index and feed."
+kind: essay               # essay | note
+tags: [agents]
+---
+```
+
+`_includes/post-dates.html` renders `Original … · Updated …` when the dates differ, and a
+single date otherwise. The same include is used by Nutshell notes.
+
+Do **not** put unpublished drafts in this repo — it is public. Keep them elsewhere and
+copy finished pieces into `_posts/`.
+
 ## Nutshell notes
 
 `_nutshell/*.md` render at `/nutshell/<filename>/` and are listed on `/nutshell/`. New note:
