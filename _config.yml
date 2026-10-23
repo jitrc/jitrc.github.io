@@ -105,6 +105,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-sitemap
 
 jekyll-mentions:
     base_url: https://github.com
@@ -114,6 +115,26 @@ jekyll-mentions:
 # The flag cannot be called `nutshell`: a collection with that label shadows
 # `site.nutshell` (it becomes the document array), so the nav check would fail.
 show_nutshell: true
+
+# Talk: the rendered Marp deck at /age_of_gen_ai/ (source files are excluded below).
+show_age_of_gen_ai: true
+
+# Files that are repo housekeeping, not site content. Jekyll copies anything
+# unmatched to the web root, so without this README/AGENTS/scripts are public.
+exclude:
+  - README.md
+  - AGENTS.md
+  - CLAUDE.md
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - scripts
+  - age_of_gen_ai/*.md
+  - age_of_gen_ai/video_script.json
 
 collections:
     nutshell:

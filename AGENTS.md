@@ -21,6 +21,10 @@ in `_includes/nav.html`. A flag must not share a name with a collection: `nutshe
 would be shadowed by the `_nutshell` collection, so `site.nutshell` becomes the document
 array and the nav check silently fails.
 
+Anything not matched by `exclude:` in `_config.yml` is copied to the web root, so new
+repo-level files (notes, scripts, agent instructions) need an entry there or they become
+public.
+
 ## Local preview
 
 System Ruby (2.6 on macOS) cannot install the pinned `github-pages` gem. Use Homebrew Ruby
