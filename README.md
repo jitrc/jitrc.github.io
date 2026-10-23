@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+# jitrc.github.io
 
-You can use the [editor on GitHub](https://github.com/jitrc/jitrc.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Personal site (Jekyll) published at <https://www.jitrc.com> by GitHub Pages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Local preview
 
-### Markdown
+GitHub Pages pins old gem versions, and macOS ships Ruby 2.6, so the repo's `Gemfile`
+(`github-pages`) will not install on a stock Mac. The fastest reliable route is a modern
+Ruby plus plain Jekyll 4:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```bash
+brew install ruby
+export PATH=/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH
 
-```markdown
-Syntax highlighted code block
+gem install jekyll jekyll-feed jekyll-seo-tag jekyll-gist jemoji jekyll-mentions --no-document
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# Jekyll auto-loads the Gemfile; this tells it to use the gems installed above instead.
+JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --livereload
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Open <http://127.0.0.1:4000>. `--livereload` refreshes the browser on save.
 
-### Jekyll Themes
+Notes:
+- If you *do* want the exact GitHub Pages build, use Ruby 3.x and
+  `bundle install && bundle exec jekyll serve` (the `github-pages` gem does not support Ruby 4).
+- The Sass partials are indented `.sass` using spaces — Dart Sass (Jekyll 4) rejects tabs,
+  even though Ruby Sass (GitHub Pages) accepts them.
+- `_site/` and `.jekyll-cache/` are build artifacts.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jitrc/jitrc.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Nutshell notes
 
-### Support or Contact
+`_nutshell/*.md` render at `/nutshell/<filename>/` and are listed on `/nutshell/`. New note:
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+```yaml
+---
+layout: nutshell
+title: "Topic in a Nutshell"
+date: 2026-10-23
+summary: "One line shown on the index."
+tags: [topic]
+---
+```
+
+Keep them cheat-sheet shaped: what it does, why it exists, the verbs/commands that matter,
+copy-paste snippets, typical use cases, gotchas. Inline SVG in a `.diagram` figure and a
+`.callout` div are styled for this section.
