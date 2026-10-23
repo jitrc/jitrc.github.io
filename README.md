@@ -44,3 +44,8 @@ tags: [topic]
 Keep them cheat-sheet shaped: what it does, why it exists, the verbs/commands that matter,
 copy-paste snippets, typical use cases, gotchas. Inline SVG in a `.diagram` figure and a
 `.callout` div are styled for this section.
+
+**Research before writing or updating.** Notes age fast: check the current spec, changelog,
+and release notes for the topic (primary sources only), and state the revision/date you
+verified against. Call out deprecations, known issues, fixes, and migration steps between
+versions — a note that describes last year's API without saying so is worse than none.
