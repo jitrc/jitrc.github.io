@@ -2,13 +2,24 @@
 layout: nutshell
 title: "MCP in a Nutshell"
 date: 2026-10-23
-summary: "The Model Context Protocol is JSON-RPC between an LLM app and the servers that expose its tools and data. Here is the whole shape of it in one page."
+summary: "Cheat sheet for the Model Context Protocol: the verbs, the snippets that get a server and client running, and when to reach for it instead of a bespoke tool API."
 tags: [agents, mcp, protocols]
 ---
 
-MCP (Model Context Protocol) standardises one thing: how an LLM application asks for
-capabilities it did not ship with. Instead of every IDE and chat app inventing its own
-plugin API, both sides speak the same JSON-RPC 2.0 dialect.
+## What it does
+
+MCP is a JSON-RPC 2.0 protocol that lets an LLM application (the **host**) discover and
+call capabilities exposed by a separate program (the **server**). One server exposes
+tools, resources, and prompts; every MCP-capable host can use it without custom glue.
+
+## Why it exists
+
+- **N × M → N + M.** Before MCP, each app wrote its own integration for each tool. Now one
+  server works in every host, and one host speaks to every server.
+- **The model gets structure, not scraped text.** Tool names, descriptions, and JSON
+  Schemas are generated from code and handed to the model, so calls are validated.
+- **Capabilities become a deployment, not a fork.** Ship a server, point hosts at it, and
+  revoke it without rebuilding the app.
 
 <figure class="diagram">
 <svg viewBox="0 0 640 210" role="img" aria-labelledby="mcp-diagram-title">
@@ -25,7 +36,7 @@ plugin API, both sides speak the same JSON-RPC 2.0 dialect.
 
   <rect x="245" y="55" width="150" height="100" rx="6" fill="#fff" stroke="#4b0082"/>
   <text x="320" y="95" text-anchor="middle" font-size="15" fill="#222">MCP server</text>
-  <text x="320" y="118" text-anchor="middle" font-size="11" fill="#666">capability provider</text>
+  <text x="320" y="118" text-anchor="middle" font-size="11" fill="#666">tools · resources · prompts</text>
 
   <rect x="470" y="55" width="160" height="100" rx="6" fill="#ededed" stroke="#666"/>
   <text x="550" y="95" text-anchor="middle" font-size="15" fill="#222">Tools &amp; data</text>
@@ -39,91 +50,156 @@ plugin API, both sides speak the same JSON-RPC 2.0 dialect.
   <line x1="397" y1="105" x2="466" y2="105" stroke="#666" stroke-width="1.5" marker-end="url(#arrow)"/>
   <text x="431" y="140" text-anchor="middle" font-size="10" fill="#666">your code</text>
 </svg>
-<figcaption>The host owns the model and the client connection; the server owns one integration.</figcaption>
+<figcaption>The host owns the model; the server owns exactly one integration.</figcaption>
 </figure>
 
-## The three roles
+## Cheat sheet: the verbs
 
-- **Host** — the app the user runs: an IDE, a chat client, an agent runtime. It owns the
-  model, the user consent UI, and one **client** per connected server.
-- **Client** — the connection object inside the host. One client ↔ one server.
-- **Server** — a small process or HTTP service that exposes capabilities. It does not
-  call the model; it only answers requests and emits notifications.
-
-A single host typically runs several servers side by side (filesystem, git, a database,
-an internal API). That is the whole point: integrations compose without the host
-knowing anything about them.
-
-## What a server can expose
-
-| Primitive | Direction | Use it for |
-|---|---|---|
-| **Tools** | model-invoked | Actions with side effects: run a query, write a file, call an API |
-| **Resources** | app-controlled | Read-only context addressed by URI: a file, a schema, a log |
-| **Prompts** | user-invoked | Slash-command style templates the user picks explicitly |
-
-Tools are what most people mean by "MCP". Resources are the quiet workhorse for
-giving the model grounded context without pretending it is an action.
-
-Two newer capabilities cut the other way: **sampling** lets a server ask the host's model
-to generate text, and **elicitation** lets it ask the user a structured question. Both
-require explicit host support, so negotiate them rather than assuming.
-
-## The handshake
-
-Every session starts with `initialize`, and nothing else may be sent first:
-
-```json
-{"jsonrpc":"2.0","id":1,"method":"initialize","params":{
-  "protocolVersion":"2025-06-18",
-  "capabilities":{"roots":{"listChanged":true}},
-  "clientInfo":{"name":"my-ide","version":"1.2.0"}}}
-```
-
-The server replies with its own `protocolVersion`, `capabilities`, and `serverInfo`, and
-the client sends an `initialized` notification to close the loop. After that, calls look
-like ordinary JSON-RPC:
-
-```json
-{"jsonrpc":"2.0","id":7,"method":"tools/call","params":{
-  "name":"query_orders","arguments":{"since":"2026-10-01"}}}
-```
+| Method | What it does |
+|---|---|
+| `initialize` | Handshake: exchange protocol version, capabilities, client/server info |
+| `notifications/initialized` | Client confirms the handshake; nothing else may be sent before this |
+| `tools/list` | List tools with `name`, `title`, `description`, `inputSchema` |
+| `tools/call` | Run a tool with `{name, arguments}`; returns `content`, `structuredContent`, `isError` |
+| `resources/list` | List concrete resources by URI (`file:///…`, `catalog://genres`) |
+| `resources/templates/list` | List parameterised URIs (`catalog://genres/{genre}`) |
+| `resources/read` | Read a concrete or template-filled URI |
+| `prompts/list` / `prompts/get` | List user-invoked templates / render one to messages |
+| `completion/complete` | Autocomplete prompt or resource-template arguments |
+| `notifications/cancelled` | Cancel an in-flight request |
+| `notifications/tools/list_changed` | Server signal that the tool list changed; refresh caches |
 
 <div class="callout">
-<strong>Version skew is the usual failure</strong>
-The protocol ships revisions, not semantic-version patches. If the versions differ, the
-client must fall back to one it supports or abort — parsing a newer server's response with
-older assumptions is how you get silent truncation of tool results.
+<strong>Protocol versions move fast</strong>
+Latest stable revision is <code>2025-11-25</code>; the <code>2026-07-28</code> revision is a
+release candidate that removes sessions and the <code>initialize</code> handshake. SDK v2
+negotiates per connection, so the snippets below work against both — but pin versions when
+you write raw JSON-RPC.
 </div>
 
-## Transport
+## Snippets
 
-- **stdio** — host spawns the server as a child process and speaks newline-delimited
-  JSON-RPC on stdin/stdout. Simplest and the default for local tools. Never write logs to
-  stdout; use stderr or you corrupt the stream.
-- **Streamable HTTP** — a single endpoint handling POST and optional SSE, with session
-  IDs and resumability. Use it for shared or remote servers, and put real auth in front
-  of it. The older HTTP+SSE transport is deprecated.
+### Install
 
-## Gotchas worth knowing before you ship
+```bash
+uv add "mcp[cli]"        # or: pip install "mcp[cli]"   (Python 3.11+)
+```
 
-- **Tool results are untrusted input.** A tool can return text that says "ignore previous
-  instructions". Treat server output as data, never as instructions, and keep the approval
-  step in the host.
-- **Describe tools for a model, not for a human.** Names, descriptions, and JSON schemas
-  are the prompt. Vague descriptions produce wrong calls far more often than weak models do.
-- **Listings change at runtime.** `tools/list_changed` (and the resources/prompts
-  equivalents) means the host must refresh; cached tool lists go stale when a server adds
-  or drops a tool mid-session.
-- **Timeouts belong to the host.** Servers are ordinary programs that can hang. Bound every
-  call, and make cancellation (`notifications/cancelled`) actually tear down the work.
-- **Sandbox the server, not just the tool.** A local stdio server runs with your user's
-  permissions. If it shells out, the container or VM boundary is the real security control.
+### Minimal server
+
+```python
+# server.py
+from mcp.server import MCPServer
+
+mcp = MCPServer("Demo", instructions="Small demo server.")
+
+@mcp.tool()
+def add(a: int, b: int) -> int:
+    """Add two numbers."""
+    return a + b
+
+@mcp.resource("greeting://{name}")
+def greeting(name: str) -> str:
+    """Greet someone by name."""
+    return f"Hello, {name}!"
+
+if __name__ == "__main__":
+    mcp.run()                  # stdio, for local hosts
+```
+
+Type hints become the JSON Schema; the docstring becomes the description the model reads.
+No schema file, no request parsing.
+
+### Run and inspect it
+
+```bash
+uv run mcp dev server.py                                  # opens the MCP Inspector UI
+uv run mcp run server.py --transport streamable-http       # http://localhost:8000/mcp
+```
+
+### Minimal client
+
+```python
+import anyio
+from mcp import Client
+
+async def main() -> None:
+    async with Client("http://localhost:8000/mcp") as client:
+        print(client.server_info, client.protocol_version)
+
+        tools = await client.list_tools()
+        print([t.name for t in tools.tools])
+
+        result = await client.call_tool("add", {"a": 2, "b": 3})
+        print(result.content, result.structured_content, result.is_error)
+
+anyio.run(main)
+```
+
+`Client(...)` also accepts `StdioServerParameters` (spawn a subprocess) or a server object
+(in-process, for tests — no port, no process).
+
+### Point a host at it
+
+```json
+{
+  "mcpServers": {
+    "demo": {
+      "command": "uv",
+      "args": ["run", "--directory", "/path/to/project", "mcp", "run", "server.py"]
+    },
+    "bookshop": {
+      "url": "https://bookshop.internal/mcp",
+      "headers": { "Authorization": "Bearer ${BOOKSHOP_TOKEN}" }
+    }
+  }
+}
+```
+
+### Raw JSON-RPC over HTTP
+
+```bash
+curl -s http://localhost:8000/mcp \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json, text/event-stream' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call",
+       "params":{"name":"add","arguments":{"a":2,"b":3}}}'
+```
+
+Both `Content-Type` and that exact `Accept` pair are required; the response is SSE-framed
+JSON-RPC, one `data:` line per message.
+
+## Typical use cases
+
+| Scenario | What you expose |
+|---|---|
+| Coding agent needs the repo | `read_file`, `search`, `apply_patch` tools + file resources |
+| Internal data assistant | A `query_*` tool per safe query shape, plus schema resources |
+| Support/ops agent | Ticket lookup and escalation tools; runbooks as prompts |
+| Observability | `logs_search`, `metrics_query` tools; dashboards as resources |
+| Third-party SaaS | A hosted Streamable HTTP server with OAuth, one per tenant |
+
+Reach for MCP when the capability should outlive one app, or when more than one host
+should be able to use it. If the tool only exists to serve one prompt in one product, a
+plain function call is cheaper.
+
+## Gotchas
+
+- **Tool output is untrusted input.** A tool can return "ignore previous instructions" —
+  keep output in the data channel and keep approvals in the host.
+- **`isError` is a result, not an exception.** `call_tool` returns normally when the tool
+  raises; check `isError` before trusting `structuredContent`.
+- **Never log to stdout on stdio transport.** It corrupts the JSON-RPC stream; use stderr.
+- **Descriptions are the prompt.** Vague tool descriptions cause wrong calls far more often
+  than weak models do.
+- **Servers inherit your permissions.** For local stdio servers, the container/VM is the
+  real security boundary, not the tool name.
+- **Version skew is silent.** `2025-11-25` and `2026-07-28` differ on sessions and
+  handshakes; negotiate instead of assuming.
 
 ## Where it sits next to ACP
 
-MCP is model ↔ tool. **ACP** (Agent Client Protocol) is editor ↔ agent: it standardises
-how an IDE launches an agent, streams its plan and diffs, and answers permission prompts.
-They are complementary — an ACP agent will usually consume MCP servers internally, and a
-given product can be both. If you are wiring an agent into an editor, reach for ACP; if you
-are giving an agent a new capability, reach for MCP.
+MCP is model ↔ tool. **ACP** (Agent Client Protocol) is editor ↔ agent: launching an
+agent, streaming its plan and diffs, answering permission prompts. They compose — an ACP
+agent typically consumes MCP servers internally. Wiring an agent into an editor: ACP.
+Giving an agent a new capability: MCP.
