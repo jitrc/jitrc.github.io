@@ -1,0 +1,31 @@
+---
+layout: page
+title: Writing
+description: "Essays and notes on AI systems, autonomy, and the work of building them."
+permalink: /writing/
+---
+<section class="nutshell-index">
+    <h1 class="title">Writing</h1>
+    <p class="nutshell-intro">Longer arguments and short observations on agents, infrastructure, and what actually happens when these systems meet the real world.</p>
+
+    {% assign posts = site.posts | sort: "date" | reverse %}
+    {% if posts.size == 0 %}
+        <p class="nutshell-empty">First piece coming soon.</p>
+    {% else %}
+        <ul class="nutshell-list">
+        {% for post in posts %}
+            <li class="nutshell-card">
+                <a class="nutshell-card-link" href="{{ post.url | relative_url }}">
+                    <h2 class="nutshell-card-title">{{ post.title }}</h2>
+                    <p class="nutshell-card-summary">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncate: 180 }}{% endif %}</p>
+                    <span class="nutshell-card-meta">
+                        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %d, %Y" }}</time>
+                        {% if post.kind %}<span class="nutshell-tag">{{ post.kind }}</span>{% endif %}
+                        {% for tag in post.tags %}<span class="nutshell-tag">{{ tag }}</span>{% endfor %}
+                    </span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</section>

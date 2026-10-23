@@ -137,3 +137,15 @@ collections:
     nutshell:
         output: true
         permalink: /nutshell/:name/
+
+# Essays and short notes. Published from _posts/, listed at /writing/.
+# Unpublished drafts do NOT belong in this repo — it is public. Keep them elsewhere
+# and copy finished pieces into _posts/.
+show_writing: true
+
+defaults:
+    - scope:
+          type: posts
+      values:
+          layout: post
+          permalink: /writing/:title/
