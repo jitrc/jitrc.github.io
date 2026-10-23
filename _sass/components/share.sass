@@ -1,71 +1,58 @@
 .share
-    float: right
-    width: 40%
-    display: inline
-    text-align: right
-    position: relative
-    top: -10px
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 8px
+    margin: 2.75rem 0 0
+    padding-top: 2rem
+    border-top: 1px solid $epsilon
 
-    @media #{$mobile}
-        width: 100%
-        display: block
-        top: 0
-        text-align: left
-        float: none
-        margin-top: 5px
-
-    @media #{$tablet}
-        width: 100%
-        display: block
-        top: 0
-        text-align: left
-        float: none
-        margin-top: 5px
-
-    > .twitter,
-    > .facebook,
-    > .google-plus,
-    > .linkedin,
-    > .reddit
-        display: inline
-        vertical-align: middle
-        font-size: 13px
-        font-weight: 700
-        color: #fff
-        padding: 6px 10px
-        border-radius: 3px
-        margin-left: 5px
-        text-decoration: none
-
-        @media #{$mobile}
-            margin: 0 5px 10px 0
-
-        @media #{$tablet}
-            margin: 0 5px 10px 0
-
-    > .twitter
-        background: #4fafed
-
-    > .facebook
-        background: #4361b3
-
-    > .google-plus
-        background: #dd4b39
-
-    > .linkedin
-        background: #0077b5
-
-    > .reddit
-        background: #ff4500
-
-    // #bug
-    // can't use .icon with >
-    // don't know why - sorry
-    // take this insted: youtube.com/watch?v=59Zcx9YbZxI
-    svg
-        fill: #fff
-        position: relative
-        top: 3px
-        margin: 0
+    .share-label
+        font-family: $fontSans
+        font-size: 11px
+        font-weight: 400
+        letter-spacing: .12em
+        text-transform: uppercase
+        color: $gama
         margin-right: 4px
-        display: inherit
+
+    .share-btn
+        display: inline-flex
+        align-items: center
+        gap: 6px
+        font-family: $fontSans
+        font-size: 13px
+        line-height: 1
+        color: $alpha
+        background: transparent
+        border: 1px solid $epsilon
+        border-radius: 999px
+        padding: 8px 14px
+        margin: 0
+        cursor: pointer
+        text-decoration: none
+        white-space: nowrap
+        transition: color .15s ease, border-color .15s ease, background .15s ease
+
+        &:hover
+            color: $beta
+            border-color: $gama
+            background: #fafafa
+
+        &:focus-visible
+            outline: 2px solid $delta
+            outline-offset: 2px
+
+        &.is-copied
+            color: $delta
+            border-color: $delta
+
+    .share-icon
+        width: 14px
+        height: 14px
+        flex: none
+        fill: none
+        stroke: currentColor
+        stroke-width: 1.75
+        stroke-linecap: round
+        stroke-linejoin: round

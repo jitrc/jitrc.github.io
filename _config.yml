@@ -31,8 +31,8 @@ analytics-google: 'G-XL29LHHM55'
 #  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: jitrc
-twitter: jitrc
+# facebook: jitrc
+# twitter: jitrc
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
