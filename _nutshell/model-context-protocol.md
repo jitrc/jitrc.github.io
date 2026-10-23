@@ -129,6 +129,64 @@ def search(query: str, limit: int = 10, cursor: str | None = None) -> dict:
 Measure it instead of guessing: whatever `tools/list` returns is roughly
 `characters / 4` tokens per request, times every server you enable.
 
+## Keeping results out of context
+
+"Add another filter parameter" does not fix this. Every extra filter is another round trip
+to the server, and the model still has to have the previous result in context to decide.
+Two patterns actually work.
+
+### 1. Dump once, slice locally
+
+[`mcporter`](https://mcporter.sh) calls any MCP server from a shell and prints clean JSON
+on stdout (progress goes to stderr), so the result becomes a file the agent can search:
+
+```bash
+npx -y mcporter list        # discovers servers from OpenCode, Claude, Codex, Cursor
+npx -y mcporter call linear.linear_get_teams --output json > teams.json
+
+rg '"key":"DAT"' teams.json | head -3
+jq -r '.teams.nodes[] | select(.key=="DAT") | .id' teams.json
+sed -n '1200,1260p' teams.json
+```
+
+A real Linear call measured here: **367 KB (≈90K tokens) written in 1.4 s**, then `grep`
+over it in **5 ms**. The model only ever reads the few hundred tokens it asked for. The
+same shape works with the official `npx @modelcontextprotocol/inspector --cli ... --format
+json`, `@wong2/mcp-cli`, or a generated standalone CLI (`mcporter generate-cli --server
+linear`). Cold start is the cost — keep a daemon (`mcporter serve`) for repeat calls.
+
+### 2. Code mode: call from a sandbox, return the answer
+
+Give the model a JavaScript/Python tool that can invoke MCP servers, and let it write one
+script that lists, filters, loops, and combines calls. The sandbox holds the full results;
+the model only sees the script's return value. One tool call replaces five, and 90K tokens
+of JSON never touch the window. This is Anthropic's "code execution with MCP" pattern.
+
+### How Pi does it
+
+[Pi](https://pi.dev) (the coding agent Harbor runs as `pi`) has built-in MCP since 0.99, and
+its defaults are built around exactly this problem:
+
+- Servers live in `~/.pi/agent/mcp.json` (user) and `.pi/mcp.json` (project, only after
+  project trust). `pi mcp add`, `pi mcp list`, `/mcp` manage them. Legacy SSE is rejected.
+- Each tool is registered as `mcp__<server>__<tool>`, then **exposed** by policy:
+
+| Exposure | What the model sees | Use for |
+|---|---|---|
+| `codemode` (**default**) | Not declared at all; reached by writing a JS script that runs in a QuickJS sandbox | Most servers — filter/combine inside the script |
+| `deferred` | Not declared until `tool_search` matches it | Big servers you want to call directly once found |
+| `direct` | Declared like a built-in tool | Small, hot tool sets |
+| `hidden` | Registered but unreachable | Disabled tools, e.g. `delete_*` |
+
+- Tool results over **20 KB** arrive with the middle elided and the full text saved to a
+  temp file named in the result — so the model can grep the file instead of the blob.
+  Scripts see the complete `CallToolResult` and can shrink it before returning.
+- Every MCP call still passes through Pi's tool pipeline, so permission extensions see it
+  as a tool call (codemode calls carry a `parentToolCallId`).
+
+The trade-off: `direct` gives the best single-call latency, `codemode` gives the smallest
+context bill. Default to `codemode`, promote a handful of hot tools to `direct`.
+
 ## Transports: stdio vs Streamable HTTP
 
 | | stdio | Streamable HTTP |
