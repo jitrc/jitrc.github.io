@@ -1,10 +1,16 @@
 ---
 title: "Same Weights, Different Harness"
 date: 2026-10-23
+image:
+  path: /assets/images/og/same-weights-different-harness.png
+  width: 1200
+  height: 630
+  alt: "Same Weights, Different Harness — jitrc.com"
 description: "ARC-AGI-3 shows the same model scoring 63% or 99% depending on what surrounds it. My own benchmark shows why that isn't the whole story."
 kind: essay
 tags: [agents, evals, benchmarks]
 ---
+
 
 This started in May 2026 as a note after instrumenting tau2-bench. The ARC-AGI-3 results below landed in July and August and forced me to rewrite the conclusion.
 

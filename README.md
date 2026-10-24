@@ -72,3 +72,17 @@ copy-paste snippets, typical use cases, gotchas. Inline SVG in a `.diagram` figu
 and release notes for the topic (primary sources only), and state the revision/date you
 verified against. Call out deprecations, known issues, fixes, and migration steps between
 versions — a note that describes last year's API without saying so is worse than none.
+
+## Social cards
+
+Each essay and note has a 1200×630 card at `assets/images/og/<slug>.png`, emitted as
+`og:image` and `twitter:image` with `twitter:card=summary_large_image`. Regenerate after a
+title, description or summary change:
+
+```bash
+node scripts/og-cards.js
+```
+
+It also writes the `image: { path, width, height, alt }` block into a file's front matter
+the first time. Requires Chrome or Chromium; set `CHROME_BIN` if it is not in the default
+location.

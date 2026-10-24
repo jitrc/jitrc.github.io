@@ -2,9 +2,15 @@
 layout: nutshell
 title: "MCP in a Nutshell"
 date: 2026-10-23
+image:
+  path: /assets/images/og/model-context-protocol.png
+  width: 1200
+  height: 630
+  alt: "MCP in a Nutshell — jitrc.com"
 summary: "Cheat sheet for the Model Context Protocol: the verbs, what tool definitions and tool results cost in context, stdio vs Streamable HTTP, stateful vs stateless revisions, and the snippets that get a server and client running."
 tags: [agents, mcp, protocols]
 ---
+
 
 ## What it does
 

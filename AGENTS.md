@@ -115,3 +115,19 @@ curl -s -o /dev/null -w '%{http_code}\n' http://127.0.0.1:4000/nutshell/<slug>/
 Check the new sections render before committing. Commit inside this repo as
 `jit.ray.c@gmail.com`; write a message that states what changed and why; do not push unless
 asked.
+
+## Social cards
+
+Every essay and note gets a 1200×630 card at `assets/images/og/<slug>.png`, used as
+`og:image` and `twitter:image` (so shares unfurl as a large card instead of a text link).
+
+```bash
+node scripts/og-cards.js            # render all cards, add image: front matter if missing
+node scripts/og-cards.js --dry-run  # show what would happen
+```
+
+Run it after changing a `title`, `description` or `summary`, and after adding a file. It
+writes `image: { path, width, height, alt }` into the front matter once; PNGs are always
+rewritten. Needs Chrome or Chromium locally (`CHROME_BIN` to override the path). The script
+is excluded from the published site; the PNGs are not.
+
