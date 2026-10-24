@@ -86,3 +86,8 @@ node scripts/og-cards.js
 It also writes the `image: { path, width, height, alt }` block into a file's front matter
 the first time. Requires Chrome or Chromium; set `CHROME_BIN` if it is not in the default
 location.
+
+## Moments images
+
+`node scripts/optimize-moments.js` regenerates `thumbs/` (220), `thumbs-2x/` (440) and
+`large/` (2560 long edge, lightbox) from the originals. Requires `npm install` for `sharp`.

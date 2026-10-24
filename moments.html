@@ -19,7 +19,7 @@ image:
     <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
       {% for moment in site.data.moments.people %}
       <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <a href="/assets/images/moments/{{ moment.filename }}"
+        <a href="/assets/images/moments/large/{{ moment.filename }}"
            title="{{ moment.alt }}"
            class="lightbox-trigger"
            data-caption="{{ moment.caption }}">
@@ -43,7 +43,7 @@ image:
     <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
       {% for moment in site.data.moments.work %}
       <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <a href="/assets/images/moments/{{ moment.filename }}"
+        <a href="/assets/images/moments/large/{{ moment.filename }}"
            title="{{ moment.alt }}"
            class="lightbox-trigger"
            data-caption="{{ moment.caption }}">
@@ -67,7 +67,7 @@ image:
     <div class="moments-grid" itemscope itemtype="https://schema.org/ImageGallery">
       {% for moment in site.data.moments.fun %}
       <figure class="moment-item" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <a href="/assets/images/moments/{{ moment.filename }}"
+        <a href="/assets/images/moments/large/{{ moment.filename }}"
            title="{{ moment.alt }}"
            class="lightbox-trigger"
            data-caption="{{ moment.caption }}">
