@@ -26,6 +26,17 @@
         > .item > .link
             font-size: 1.4rem
             padding: 20px 10px
+            white-space: nowrap
+
+    // Five nav items no longer fit beside the logo on phones; tighten the
+    // padding instead of letting "Age of GenAI" run off the right edge.
+    @media (max-width: 600px)
+        > .list
+            padding: 0 6px
+
+            > .item > .link
+                font-size: 1.25rem
+                padding: 18px 6px
 
 .nav-home
     margin-top: 40px
@@ -40,7 +51,10 @@
             margin: 0
             border-radius: 4%
             transition: all .4s ease-in-out
-            width: 70px
+            // min-width keeps the labels evenly spaced without forcing
+            // "Age of GenAI" into a two-line box the way width: 70px did.
+            min-width: 70px
+            white-space: nowrap
 
             &:hover
                 color: $alpha
