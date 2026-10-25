@@ -375,3 +375,5 @@ MCP is model ↔ tool. **ACP** (Agent Client Protocol) is editor ↔ agent: laun
 agent, streaming its plan and diffs, answering permission prompts. They compose — an ACP
 agent typically consumes MCP servers internally. Wiring an agent into an editor: ACP.
 Giving an agent a new capability: MCP.
+
+There is a companion note: [ACP in a Nutshell](/nutshell/agent-client-protocol/).
