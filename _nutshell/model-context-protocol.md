@@ -2,6 +2,7 @@
 layout: nutshell
 title: "MCP in a Nutshell"
 date: 2026-10-23
+applies_to: "MCP 2025-11-25 · RC 2026-07-28"
 image:
   path: /assets/images/og/model-context-protocol.png
   width: 1200

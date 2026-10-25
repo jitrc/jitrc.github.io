@@ -2,6 +2,7 @@
 layout: nutshell
 title: "OTel GenAI Semconv in a Nutshell"
 date: 2026-10-24
+applies_to: "semconv-genai · SDK 1.45.1"
 image:
   path: /assets/images/og/otel-genai-semconv.png
   width: 1200
@@ -12,16 +13,17 @@ tags: [agents, observability, opentelemetry]
 ---
 
 
-<div class="callout">
-<strong>Verified 2026-10-24</strong> against <code>open-telemetry/semantic-conventions-genai</code> (the conventions moved out of the main semconv repo — the opentelemetry.io pages now redirect there) and <code>opentelemetry-sdk</code> 1.45.1. Every signal is status <strong>Development</strong>, i.e. experimental: attribute names are still moving. The span snippet below was executed and produces the trace shown.
-</div>
-
 ## What it does
 
 The GenAI semantic conventions are a naming scheme for telemetry from model calls, agents and
 tools: what a span is called, which attributes it carries, which metrics exist. They do not
 change what you instrument — they make the result comparable across providers, SDKs and
 dashboards.
+
+Two things to know before depending on them. Every signal is still status **Development**, so
+attribute names move between releases. And the conventions now live in their own repository,
+`open-telemetry/semantic-conventions-genai` — the pages under `opentelemetry.io/docs/specs/semconv/gen-ai/`
+are stubs that redirect there.
 
 ## Why it exists
 
@@ -203,7 +205,7 @@ content archived — which is how you debug a 0.1% sample without paying to stor
 
 ## Snippets
 
-### A correctly-shaped trace (run, not transcribed)
+### A correctly-shaped trace
 
 ```python
 from opentelemetry import trace
@@ -231,7 +233,7 @@ with tracer.start_as_current_span("invoke_agent support-bot") as agent:
         call.set_attribute("gen_ai.response.finish_reasons", ["stop"])
 ```
 
-Run with `opentelemetry-sdk` 1.45.1 and the console exporter prints exactly that nesting —
+With `opentelemetry-sdk` 1.45.1 and the console exporter, this prints exactly that nesting —
 `parent_id` of the `chat` span is the `span_id` of `invoke_agent`, and both names match the
 required formats. No instrumentation library, no collector: the conventions are a naming
 discipline first.

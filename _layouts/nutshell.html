@@ -6,6 +6,7 @@ layout: page
 
     <p class="nutshell-meta">
         {% include post-dates.html %}
+        {% if page.applies_to %}<span class="nutshell-applies">{{ page.applies_to }}</span>{% endif %}
         {% for tag in page.tags %}<span class="nutshell-tag">{{ tag }}</span>{% endfor %}
     </p>
 

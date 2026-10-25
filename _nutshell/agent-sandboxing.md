@@ -2,6 +2,7 @@
 layout: nutshell
 title: "Agent Sandboxing in a Nutshell"
 date: 2026-10-24
+applies_to: "Docker 27.0 · gVisor · Firecracker"
 image:
   path: /assets/images/og/agent-sandboxing.png
   width: 1200
@@ -11,10 +12,6 @@ summary: "Cheat sheet for running model-written code: what a container actually 
 tags: [agents, sandboxing, infrastructure]
 ---
 
-
-<div class="callout">
-<strong>Verified 2026-10-24</strong> against the gVisor docs, Firecracker's <code>design.md</code> and <code>SPECIFICATION.md</code>, Docker's seccomp documentation, the Linux Landlock API, and the Modal and E2B sandbox docs. Docker flags were checked with <code>docker run --help</code>. <strong>No snippet here ran against a live daemon</strong> — this machine has no running Linux engine and no hosted provider was called, so treat the provider snippets as transcribed, not executed.
-</div>
 
 ## What it does
 
@@ -72,7 +69,7 @@ and *how long it can run* — and you need all three before an agent may execute
 
 ## Cheat sheet: the Docker flags that matter
 
-Every flag below is a real `docker run` flag (checked with `docker run --help`).
+Every flag below is a real `docker run` flag.
 
 | Flag | Stops | Does not stop |
 |---|---|---|

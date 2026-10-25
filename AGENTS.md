@@ -95,10 +95,20 @@ Prefer tables over prose. If a paragraph would be a table row, make it a table r
 layout: nutshell
 title: "Topic in a Nutshell"
 date: 2026-10-23
+applies_to: "Spec v1.2.3"
 summary: "One line shown on the index and under the title."
 tags: [topic, area]
 ---
 ```
+
+`applies_to` renders as a quiet line beside the date — `ACP schema v1.26.0`, `Docker 27.0 ·
+gVisor`. It answers "what does this describe, as of when" in four words. Keep it to versions or
+a named technology, not a sentence.
+
+Do not put a verification callout at the top of a note, and do not narrate how the note was
+researched. That reads as an audit trail rather than a reference. Provenance that a reader
+actually needs belongs in the body beside the claim it qualifies ("the exchange below is from
+`mcp.linear.app`, October 2026"), and dependency versions belong beside the install command.
 
 - `<figure class="diagram"><svg …>…</svg><figcaption>…</figcaption></figure>` — responsive
   inline SVG, no JS. Add `role="img"` and a `<title>`.

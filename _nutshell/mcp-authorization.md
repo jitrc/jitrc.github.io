@@ -2,6 +2,7 @@
 layout: nutshell
 title: "MCP Auth in a Nutshell"
 date: 2026-10-24
+applies_to: "MCP 2025-11-25 · draft 2026-07-28"
 image:
   path: /assets/images/og/mcp-authorization.png
   width: 1200
@@ -11,10 +12,6 @@ summary: "Cheat sheet for MCP authorization: the discovery chain from a 401 to a
 tags: [agents, mcp, security]
 ---
 
-
-<div class="callout">
-<strong>Verified 2026-10-24</strong> against the MCP specification revisions <code>2025-11-25</code> (stable) and <code>2026-07-28</code> (current draft), plus that revision's changelog. The discovery walkthrough below was captured live from <code>mcp.linear.app</code> and <code>mcp.stripe.com</code>, so the URLs, headers and field names are real responses rather than transcribed examples.
-</div>
 
 ## What it does
 
@@ -86,7 +83,7 @@ format and no shared secret between client and server.
 
 ### What that looks like on a real server
 
-Captured from `mcp.linear.app` on 2026-10-24. The unauthenticated request:
+The exchange below is from `mcp.linear.app` (October 2026). The unauthenticated request:
 
 ```http
 POST /mcp HTTP/2

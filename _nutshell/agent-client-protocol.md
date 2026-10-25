@@ -2,6 +2,7 @@
 layout: nutshell
 title: "ACP in a Nutshell"
 date: 2026-10-24
+applies_to: "ACP schema v1.26.0"
 image:
   path: /assets/images/og/agent-client-protocol.png
   width: 1200
@@ -11,13 +12,6 @@ summary: "Cheat sheet for the Agent Client Protocol: who calls whom, the prompt-
 tags: [agents, acp, protocols]
 ---
 
-
-<div class="callout">
-<strong>Verified against</strong> ACP schema <code>v1.26.0</code> and Rust crate <code>v1.12.0</code>, both
-released 2026-10-16 · <code>agent-client-protocol</code> 0.12.1 (PyPI) · <code>@agentclientprotocol/sdk</code>
-2.0.2 (npm). Checked 2026-10-24. A v2 schema exists as <code>v2.0.0-alpha.9</code>; the differences are
-in <a href="#revisions">Revisions</a> below.
-</div>
 
 ## What it does
 
@@ -272,7 +266,9 @@ uv add agent-client-protocol          # Python; needs 3.10–3.14
 npm install @agentclientprotocol/sdk  # TypeScript
 ```
 
-### A minimal agent (verified over real stdio)
+Current releases: `agent-client-protocol` 0.12.1 (PyPI), `@agentclientprotocol/sdk` 2.0.2 (npm).
+
+### A minimal agent
 
 ```python
 # agent.py
@@ -324,7 +320,7 @@ $ (printf '%s\n' \
 {"jsonrpc":"2.0","id":2,"result":{"sessionId":"4ec75b25-…"}}
 ```
 
-Two things the docs gloss over and this snippet encodes: `run_agent()` is a **coroutine**
+Two details this snippet encodes that the quickstart does not spell out: `run_agent()` is a **coroutine**
 (`asyncio.run(...)`, not a bare call), and stdio must actually be a pipe — redirecting a file
 into stdin fails with `ValueError: Pipe transport is for pipes/sockets only`. Use a pipeline,
 not `< file`.
